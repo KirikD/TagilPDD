@@ -66,6 +66,7 @@ namespace PG
             }
 
             SoundHelper.TryAddAudioListiner (gameObject);
+            Destroy(GetComponent<AudioListener>());
         }
 
         private void OnEnable ()

@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: 04b35af3ab3642a4f9170f2d780953e3
+  productGUID: ac677f98ea4920d498427c5d93e15930
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -40,14 +40,15 @@ PlayerSettings:
     width: 1
     height: 1
   m_SplashScreenLogos: []
-  m_VirtualRealitySplashScreen: {fileID: 0}
+  m_VirtualRealitySplashScreen: {fileID: 2800000, guid: 57d7baf81d7434b4c8bdd0d82ed4e76d,
+    type: 3}
   m_HolographicTrackingLossScreen: {fileID: 0}
-  defaultScreenWidth: 1920
-  defaultScreenHeight: 1080
+  defaultScreenWidth: 1024
+  defaultScreenHeight: 768
   defaultScreenWidthWeb: 960
   defaultScreenHeightWeb: 600
   m_StereoRenderingPath: 0
-  m_ActiveColorSpace: 1
+  m_ActiveColorSpace: 0
   m_SpriteBatchVertexThreshold: 300
   m_MTRendering: 1
   mipStripping: 0
@@ -67,7 +68,7 @@ PlayerSettings:
   disableDepthAndStencilBuffers: 0
   androidStartInFullscreen: 1
   androidRenderOutsideSafeArea: 1
-  androidUseSwappy: 1
+  androidUseSwappy: 0
   androidBlitType: 0
   androidResizableWindow: 0
   androidDefaultWindowWidth: 1920
@@ -92,7 +93,7 @@ PlayerSettings:
   resizableWindow: 0
   useMacAppStoreValidation: 0
   macAppStoreCategory: public.app-category.games
-  gpuSkinning: 1
+  gpuSkinning: 0
   xboxPIXTextureCapture: 0
   xboxEnableAvatar: 0
   xboxEnableKinect: 0
@@ -114,7 +115,7 @@ PlayerSettings:
   xboxOneDisableEsram: 0
   xboxOneEnableTypeOptimization: 0
   xboxOnePresentImmediateThreshold: 0
-  switchQueueCommandMemory: 0
+  switchQueueCommandMemory: 1048576
   switchQueueControlMemory: 16384
   switchQueueComputeMemory: 262144
   switchNVNShaderPoolsGranularity: 33554432
@@ -129,17 +130,17 @@ PlayerSettings:
   stadiaTargetFramerate: 0
   vulkanNumSwapchainBuffers: 3
   vulkanEnableSetSRGBWrite: 0
-  vulkanEnablePreTransform: 1
+  vulkanEnablePreTransform: 0
   vulkanEnableLateAcquireNextImage: 0
   vulkanEnableCommandBufferRecycling: 1
   loadStoreDebugModeEnabled: 0
-  bundleVersion: 0.1
+  bundleVersion: 2.0
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
-  xboxOneDisableKinectGpuReservation: 1
-  xboxOneEnable7thCore: 1
+  xboxOneDisableKinectGpuReservation: 0
+  xboxOneEnable7thCore: 0
   vrSettings:
     enable360StereoCapture: 0
   isWsaHolographicRemotingEnabled: 0
@@ -153,16 +154,18 @@ PlayerSettings:
   resetResolutionOnWindowResize: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
-  applicationIdentifier: {}
+  applicationIdentifier:
+    Android: com.Aglobex.UTS2
+    Standalone: com.oculus.UnitySample
   buildNumber:
     Standalone: 0
     iPhone: 0
     tvOS: 0
   overrideDefaultApplicationIdentifier: 0
-  AndroidBundleVersionCode: 1
-  AndroidMinSdkVersion: 22
+  AndroidBundleVersionCode: 2
+  AndroidMinSdkVersion: 23
   AndroidTargetSdkVersion: 0
-  AndroidPreferredInstallLocation: 1
+  AndroidPreferredInstallLocation: 0
   aotOptions: 
   stripEngineCode: 1
   iPhoneStrippingLevel: 0
@@ -172,9 +175,9 @@ PlayerSettings:
   CreateWallpaper: 0
   APKExpansionFiles: 0
   keepLoadedShadersAlive: 0
-  StripUnusedMeshComponents: 1
+  StripUnusedMeshComponents: 0
   strictShaderVariantMatching: 0
-  VertexChannelCompressionMask: 4054
+  VertexChannelCompressionMask: 214
   iPhoneSdkVersion: 988
   iOSTargetOSVersionString: 12.0
   tvOSSdkVersion: 0
@@ -234,9 +237,9 @@ PlayerSettings:
   iOSAutomaticallyDetectAndAddCapabilities: 1
   appleEnableProMotion: 0
   shaderPrecisionModel: 0
-  clonedFromGUID: c0afd0d1d80e3634a9dac47e8a0426ea
-  templatePackageId: com.unity.template.3d@8.1.3
-  templateDefaultScene: Assets/Scenes/SampleScene.unity
+  clonedFromGUID: 0cdbb9bc236c0544aa960999ebee33c6
+  templatePackageId: 
+  templateDefaultScene: 
   useCustomMainManifest: 0
   useCustomLauncherManifest: 0
   useCustomMainGradleTemplate: 0
@@ -249,16 +252,17 @@ PlayerSettings:
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: 
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: "D:/Unity \u043F\u0440\u043E\u0435\u043A\u0442\u044B/UTS PRO
+    2018.1/user.keystore"
+  AndroidKeyaliasName: uts
   AndroidEnableArmv9SecurityFeatures: 0
   AndroidBuildApkPerCpuArchitecture: 0
-  AndroidTVCompatibility: 0
+  AndroidTVCompatibility: 1
   AndroidIsGame: 1
   AndroidEnableTango: 0
   androidEnableBanner: 1
   androidUseLowAccuracyLocation: 0
-  androidUseCustomKeystore: 0
+  androidUseCustomKeystore: 1
   m_AndroidBanners:
   - width: 320
     height: 180
@@ -269,7 +273,14 @@ PlayerSettings:
   AndroidMinifyDebug: 0
   AndroidValidateAppBundleSize: 1
   AndroidAppBundleSizeToValidate: 150
-  m_BuildTargetIcons: []
+  m_BuildTargetIcons:
+  - m_BuildTarget: 
+    m_Icons:
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: 57d7baf81d7434b4c8bdd0d82ed4e76d, type: 3}
+      m_Width: 128
+      m_Height: 128
+      m_Kind: 0
   m_BuildTargetPlatformIcons:
   - m_BuildTarget: Android
     m_Icons:
@@ -363,49 +374,44 @@ PlayerSettings:
       m_Height: 36
       m_Kind: 0
       m_SubKind: 
-  m_BuildTargetBatching:
-  - m_BuildTarget: Standalone
-    m_StaticBatching: 1
-    m_DynamicBatching: 0
-  - m_BuildTarget: tvOS
-    m_StaticBatching: 1
-    m_DynamicBatching: 0
-  - m_BuildTarget: Android
-    m_StaticBatching: 1
-    m_DynamicBatching: 0
-  - m_BuildTarget: iPhone
-    m_StaticBatching: 1
-    m_DynamicBatching: 0
-  - m_BuildTarget: WebGL
-    m_StaticBatching: 0
-    m_DynamicBatching: 0
+  m_BuildTargetBatching: []
   m_BuildTargetShaderSettings: []
   m_BuildTargetGraphicsJobs:
+  - m_BuildTarget: WindowsStandaloneSupport
+    m_GraphicsJobs: 0
   - m_BuildTarget: MacStandaloneSupport
     m_GraphicsJobs: 0
-  - m_BuildTarget: Switch
-    m_GraphicsJobs: 1
-  - m_BuildTarget: MetroSupport
-    m_GraphicsJobs: 1
-  - m_BuildTarget: AppleTVSupport
-    m_GraphicsJobs: 0
-  - m_BuildTarget: BJMSupport
-    m_GraphicsJobs: 1
   - m_BuildTarget: LinuxStandaloneSupport
-    m_GraphicsJobs: 1
-  - m_BuildTarget: PS4Player
-    m_GraphicsJobs: 1
-  - m_BuildTarget: iOSSupport
-    m_GraphicsJobs: 0
-  - m_BuildTarget: WindowsStandaloneSupport
-    m_GraphicsJobs: 1
-  - m_BuildTarget: XboxOnePlayer
-    m_GraphicsJobs: 1
-  - m_BuildTarget: LuminSupport
     m_GraphicsJobs: 0
   - m_BuildTarget: AndroidPlayer
     m_GraphicsJobs: 0
+  - m_BuildTarget: iOSSupport
+    m_GraphicsJobs: 0
+  - m_BuildTarget: PS4Player
+    m_GraphicsJobs: 0
+  - m_BuildTarget: PS5Player
+    m_GraphicsJobs: 0
+  - m_BuildTarget: XboxOnePlayer
+    m_GraphicsJobs: 0
+  - m_BuildTarget: GameCoreXboxOneSupport
+    m_GraphicsJobs: 0
+  - m_BuildTarget: GameCoreScarlettSupport
+    m_GraphicsJobs: 0
+  - m_BuildTarget: Switch
+    m_GraphicsJobs: 0
   - m_BuildTarget: WebGLSupport
+    m_GraphicsJobs: 0
+  - m_BuildTarget: MetroSupport
+    m_GraphicsJobs: 0
+  - m_BuildTarget: AppleTVSupport
+    m_GraphicsJobs: 0
+  - m_BuildTarget: BJMSupport
+    m_GraphicsJobs: 0
+  - m_BuildTarget: CloudRendering
+    m_GraphicsJobs: 0
+  - m_BuildTarget: EmbeddedLinux
+    m_GraphicsJobs: 0
+  - m_BuildTarget: QNX
     m_GraphicsJobs: 0
   m_BuildTargetGraphicsJobMode:
   - m_BuildTarget: PS4Player
@@ -413,18 +419,12 @@ PlayerSettings:
   - m_BuildTarget: XboxOnePlayer
     m_GraphicsJobMode: 0
   m_BuildTargetGraphicsAPIs:
-  - m_BuildTarget: AndroidPlayer
-    m_APIs: 150000000b000000
-    m_Automatic: 1
   - m_BuildTarget: iOSSupport
     m_APIs: 10000000
     m_Automatic: 1
-  - m_BuildTarget: AppleTVSupport
-    m_APIs: 10000000
-    m_Automatic: 1
-  - m_BuildTarget: WebGLSupport
-    m_APIs: 0b000000
-    m_Automatic: 1
+  - m_BuildTarget: AndroidPlayer
+    m_APIs: 0b00000008000000
+    m_Automatic: 0
   m_BuildTargetVRSettings:
   - m_BuildTarget: Standalone
     m_Enabled: 0
@@ -442,31 +442,23 @@ PlayerSettings:
     iPhone: 1
     tvOS: 1
   m_BuildTargetGroupLightmapEncodingQuality:
-  - m_BuildTarget: Android
+  - m_BuildTarget: Standalone
     m_EncodingQuality: 1
-  - m_BuildTarget: iPhone
+  - m_BuildTarget: XboxOne
     m_EncodingQuality: 1
-  - m_BuildTarget: tvOS
+  - m_BuildTarget: PS4
     m_EncodingQuality: 1
   m_BuildTargetGroupHDRCubemapEncodingQuality:
-  - m_BuildTarget: Android
-    m_EncodingQuality: 1
-  - m_BuildTarget: iPhone
-    m_EncodingQuality: 1
-  - m_BuildTarget: tvOS
-    m_EncodingQuality: 1
+  - m_BuildTarget: Standalone
+    m_EncodingQuality: 2
+  - m_BuildTarget: XboxOne
+    m_EncodingQuality: 2
+  - m_BuildTarget: PS4
+    m_EncodingQuality: 2
   m_BuildTargetGroupLightmapSettings: []
   m_BuildTargetGroupLoadStoreDebugModeSettings: []
-  m_BuildTargetNormalMapEncoding:
-  - m_BuildTarget: Android
-    m_Encoding: 1
-  - m_BuildTarget: iPhone
-    m_Encoding: 1
-  - m_BuildTarget: tvOS
-    m_Encoding: 1
-  m_BuildTargetDefaultTextureCompressionFormat:
-  - m_BuildTarget: Android
-    m_Format: 3
+  m_BuildTargetNormalMapEncoding: []
+  m_BuildTargetDefaultTextureCompressionFormat: []
   playModeTestRunnerEnabled: 0
   runPlayModeTestAsEditModeTest: 0
   actionOnDotNetUnhandledException: 1
@@ -600,9 +592,9 @@ PlayerSettings:
   switchDataLossConfirmation: 0
   switchUserAccountLockEnabled: 0
   switchSystemResourceMemory: 16777216
-  switchSupportedNpadStyles: 22
+  switchSupportedNpadStyles: 3
   switchNativeFsCacheSize: 32
-  switchIsHoldTypeHorizontal: 0
+  switchIsHoldTypeHorizontal: 1
   switchSupportedNpadCount: 8
   switchEnableTouchScreen: 1
   switchSocketConfigEnabled: 0
@@ -616,7 +608,7 @@ PlayerSettings:
   switchSocketInitializeEnabled: 1
   switchNetworkInterfaceManagerInitializeEnabled: 1
   switchPlayerConnectionEnabled: 1
-  switchUseNewStyleFilepaths: 0
+  switchUseNewStyleFilepaths: 1
   switchUseLegacyFmodPriorities: 0
   switchUseMicroSleepForYield: 1
   switchEnableRamDiskSupport: 0
@@ -702,11 +694,11 @@ PlayerSettings:
   splashScreenBackgroundSourcePortrait: {fileID: 0}
   blurSplashScreenBackground: 1
   spritePackerPolicy: 
-  webGLMemorySize: 16
+  webGLMemorySize: 256
   webGLExceptionSupport: 1
   webGLNameFilesAsHashes: 0
   webGLShowDiagnostics: 0
-  webGLDataCaching: 1
+  webGLDataCaching: 0
   webGLDebugSymbols: 0
   webGLEmscriptenArgs: 
   webGLModulesDirectory: 
@@ -726,7 +718,7 @@ PlayerSettings:
   webGLMemoryGeometricGrowthCap: 96
   webGLPowerPreference: 2
   scriptingDefineSymbols:
-    Android: ENVIRO_LW;ENVIRO_HD
+    Android: CROSS_PLATFORM_INPUT;ENVIRO_LW;ENVIRO_HD
     EmbeddedLinux: ENVIRO_LW;ENVIRO_HD
     GameCoreScarlett: ENVIRO_LW;ENVIRO_HD
     GameCoreXboxOne: ENVIRO_LW;ENVIRO_HD
@@ -736,10 +728,11 @@ PlayerSettings:
     PS5: ENVIRO_LW;ENVIRO_HD
     QNX: ENVIRO_LW;ENVIRO_HD
     Stadia: ENVIRO_LW;ENVIRO_HD
-    Standalone: WEATHER_MAKER_PRESENT;UNITY_URP;ENVIRO_LW;ENVIRO_HD
+    Standalone: CROSS_PLATFORM_INPUT;ENVIRO_LW;ENVIRO_HD
     WebGL: ENVIRO_LW;ENVIRO_HD
     Windows Store Apps: ENVIRO_LW;ENVIRO_HD
     XboxOne: ENVIRO_LW;ENVIRO_HD
+    iPhone: CROSS_PLATFORM_INPUT
     tvOS: ENVIRO_LW;ENVIRO_HD
   additionalCompilerArguments: {}
   platformArchitecture: {}
@@ -772,14 +765,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Template_3D
+  metroPackageName: TagilPDD
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: Template_3D
+  metroApplicationDescription: TagilPDD
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -791,7 +784,8 @@ PlayerSettings:
   metroDefaultTileSize: 1
   metroTileForegroundText: 2
   metroTileBackgroundColor: {r: 0.13333334, g: 0.17254902, b: 0.21568628, a: 0}
-  metroSplashScreenBackgroundColor: {r: 0.12941177, g: 0.17254902, b: 0.21568628, a: 1}
+  metroSplashScreenBackgroundColor: {r: 0.12941177, g: 0.17254902, b: 0.21568628,
+    a: 1}
   metroSplashScreenUseBackgroundColor: 0
   platformCapabilities: {}
   metroTargetDeviceFamilies: {}
@@ -818,7 +812,7 @@ PlayerSettings:
   XboxOneGameRating: {}
   XboxOneIsContentPackage: 0
   XboxOneEnhancedXboxCompatibilityMode: 0
-  XboxOneEnableGPUVariability: 1
+  XboxOneEnableGPUVariability: 0
   XboxOneSockets: {}
   XboxOneSplashScreen: {fileID: 0}
   XboxOneAllowedProductIds: []
@@ -827,8 +821,7 @@ PlayerSettings:
   XboxOneOverrideIdentityName: 
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
-  cloudServicesEnabled:
-    UNet: 1
+  cloudServicesEnabled: {}
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -854,7 +847,7 @@ PlayerSettings:
   projectName: 
   organizationId: 
   cloudEnabled: 0
-  legacyClampBlendShapeWeights: 0
+  legacyClampBlendShapeWeights: 1
   hmiLoadingImage: {fileID: 0}
   platformRequiresReadableAssets: 0
   virtualTexturingSupportEnabled: 0
