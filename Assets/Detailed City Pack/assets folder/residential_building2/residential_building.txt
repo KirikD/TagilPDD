@@ -1,0 +1,17 @@
+This is an optimised city building suitable for game city levels.
+The building is about 5300 triangles and only 4 draw calls (props not
+included).
+There are 7 different props for the building in a different mesh file
+to allow customization. The building mesh is divided in 4 different parts:
+
+- Building2. The main building
+
+- Building2_details. This is a complementary mesh (using the same main 
+building texture) that add details mostly to the lower part of the building. 
+To be used when the player gets close to the building 
+
+- Building2_roof. You may want to delete this part and it's texture if 
+the building is never going to be seen from above. 
+
+- Building2_trans. All the meshes that use the transparent material.
+

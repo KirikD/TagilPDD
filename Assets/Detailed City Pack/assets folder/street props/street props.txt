@@ -1,0 +1,29 @@
+This package contains 23 props in total with detailed squared textures of
+1024 and 2048 pixels.
+18 props have different Levels of Detail (Unity 3.5 Pro needed) making 
+41 meshes in total.
+
+
+How to use:
+If you are a Unity 3.5 Pro user, use the "LOD prefabs" folder with the LODed meshes.
+If you don't want to use LODed prefabs or you don't have Unity Pro, use the meshes from
+"meshes" folder, choosing the LOD that fits better your needs.
+
+
+_____________________________________
+
+Version history:
+
+1.0 Initial release
+
+1.1 Mesh update
+
+1.2 Mesh updates
+
+1.3 Texture and unwrap updates
+
+1.4 Added LODed prefabs 
+
+
+
+

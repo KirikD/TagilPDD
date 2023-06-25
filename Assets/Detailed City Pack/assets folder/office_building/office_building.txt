@@ -1,0 +1,40 @@
+This is a LODed office building suitable for city game levels.
+*LODs are available only on Unity Pro.
+
+LOD0: 3000 triangles and 7 drawcalls
+LOD1: 1700 triangles and 4 drawcalls
+LOD2: 836 triangles and 3 drawcalls
+
+
+The asset includes a post box prop, the skybox and office props 
+for the buiding lobby.
+All textures are 1024x1024 (the building is 2048x2048) and normal 
+maps are included.
+
+- Update: added office props for the buiding lobby.
+
+_____________________________________
+How to use:
+
+Use "prefabs" folder and drop in your scene the desired prefab.
+If you are a Unity Pro user you may use the LODed prefab for the building.
+Adjust materials and scale.
+
+Note: The office props (chair, desk and shelf) that are inside 
+the building LOD with the building and are included in the building 
+mesh, but can be deleted or hided if needed. 
+These props are also inside the "prefabs" folder in case you want to
+use them in any other place. 
+
+_____________________________________
+
+Version history:
+
+
+1.1 Mesh update
+
+1.2 LODs and new office props
+
+
+
+

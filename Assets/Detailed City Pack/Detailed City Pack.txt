@@ -1,0 +1,50 @@
+This pack contains mainy detailed buildings with LODS, street props, decals, terrain textures, Nobiax Plants and the Low Poly City package with 165 buildings from more than 150 unique meshes.
+
+This pack includes Edelweiss Int. Decal system Free that can not be found in the Asset Store anymore. Included with permission of Edelweiss Int.
+Contains some Nobiax Plants that are not available anymore on the Asset Store, but included with Nobiax's permission.
+The Hard Surface shaders that were included in previous versions are discontinued because they don't work well on Unity4
+
+
+
+_____________________________________
+Intro to the demo scene:
+
+->>> Check the demo to see how I built the demo city.
+
+1. There is a plane for the asphalt, and decals where used for the street lines
+2. There are modules for the sidewalks with street lights, trees and other props.
+3. Then there are the buildings, detailed or background oriented.
+The main detailed skycraper is modular and LODed, you can have it as tall as you want.
+
+Tip!: If you want a modular approach for the strees, check the free pack https://www.assetstore.unity3d.com/en/#!/content/13811
+If you want a generator for streets and roads, try the free https://www.assetstore.unity3d.com/en/#!/content/9920
+
+
+_____________________________________
+How to use:
+
+->>> Look for the prefabs ready to use in each of the "assets folder/.../prefabs"
+i.e. if you want a detailed building, you'll find all LODS, the LODed model and the building with street props and sidewalk ready at "assets folder/residential_building/prefabs".
+
+->>> Drop anything of your interest from a prefab folder to the scene. Some prefabs may need some editting if you don't have Unity Pro version. Delete the LOD component and the LOD versions you don't want from the scene.
+
+- Please note that normally you will need to update the cubemap on the buildings' material for reflectivity.
+I recommend the use of this free cube map maker for Unity:
+
+http://www.blackicegames.de/development/?site=dl
+
+
+
+Please, send requests to dactilardesign@gmail.com
+Thank you for ratings and feedback.
+
+
+_____________________________________
+
+Version 1.6. Updated the City Low Poly pack included to the latest version
+
+
+
+
+________________________________
+
