@@ -8,11 +8,11 @@ FBXHeaderExtension:  {
 		Version: 1000
 		Year: 2023
 		Month: 6
-		Day: 20
-		Hour: 9
-		Minute: 3
-		Second: 17
-		Millisecond: 573
+		Day: 26
+		Hour: 12
+		Minute: 30
+		Second: 34
+		Millisecond: 743
 	}
 	Creator: "FBX SDK/FBX Plugins version 2020.1.1"
 	SceneInfo: "SceneInfo::GlobalInfo", "UserData" {
@@ -28,19 +28,19 @@ FBXHeaderExtension:  {
 			Comment: ""
 		}
 		Properties70:  {
-			P: "DocumentUrl", "KString", "Url", "", "U:\UnityProjects\PDD_Tagil\Assets\Alex3d\Models\Monument.fbx"
-			P: "SrcDocumentUrl", "KString", "Url", "", "U:\UnityProjects\PDD_Tagil\Assets\Alex3d\Models\Monument.fbx"
+			P: "DocumentUrl", "KString", "Url", "", "U:\UnityProjects\TagilPDD\Assets\Alex3d\Models\Monument.fbx"
+			P: "SrcDocumentUrl", "KString", "Url", "", "U:\UnityProjects\TagilPDD\Assets\Alex3d\Models\Monument.fbx"
 			P: "Original", "Compound", "", ""
 			P: "Original|ApplicationVendor", "KString", "", "", "Autodesk"
 			P: "Original|ApplicationName", "KString", "", "", "3ds Max"
 			P: "Original|ApplicationVersion", "KString", "", "", "2022"
-			P: "Original|DateTime_GMT", "DateTime", "", "", "20/06/2023 04:03:17.570"
-			P: "Original|FileName", "KString", "", "", "U:\UnityProjects\PDD_Tagil\Assets\Alex3d\Models\Monument.fbx"
+			P: "Original|DateTime_GMT", "DateTime", "", "", "26/06/2023 07:30:34.741"
+			P: "Original|FileName", "KString", "", "", "U:\UnityProjects\TagilPDD\Assets\Alex3d\Models\Monument.fbx"
 			P: "LastSaved", "Compound", "", ""
 			P: "LastSaved|ApplicationVendor", "KString", "", "", "Autodesk"
 			P: "LastSaved|ApplicationName", "KString", "", "", "3ds Max"
 			P: "LastSaved|ApplicationVersion", "KString", "", "", "2022"
-			P: "LastSaved|DateTime_GMT", "DateTime", "", "", "20/06/2023 04:03:17.570"
+			P: "LastSaved|DateTime_GMT", "DateTime", "", "", "26/06/2023 07:30:34.741"
 			P: "Original|ApplicationActiveProject", "KString", "", "", "C:\Users\Sardaukar\Documents\3ds Max 2022"
 			P: "Original|ApplicationNativeFile", "KString", "", "", "I:\Documents\PDD\Tagil.max"
 		}
@@ -49,10 +49,10 @@ FBXHeaderExtension:  {
 GlobalSettings:  {
 	Version: 1000
 	Properties70:  {
-		P: "UpAxis", "int", "Integer", "",1
+		P: "UpAxis", "int", "Integer", "",2
 		P: "UpAxisSign", "int", "Integer", "",1
-		P: "FrontAxis", "int", "Integer", "",2
-		P: "FrontAxisSign", "int", "Integer", "",1
+		P: "FrontAxis", "int", "Integer", "",1
+		P: "FrontAxisSign", "int", "Integer", "",-1
 		P: "CoordAxis", "int", "Integer", "",0
 		P: "CoordAxisSign", "int", "Integer", "",1
 		P: "OriginalUpAxis", "int", "Integer", "",2
@@ -77,7 +77,7 @@ GlobalSettings:  {
 
 Documents:  {
 	Count: 1
-	Document: 1899157310464, "", "Scene" {
+	Document: 1896917943744, "", "Scene" {
 		Properties70:  {
 			P: "SourceObject", "object", "", ""
 			P: "ActiveAnimStackName", "KString", "", "", ""
@@ -97,12 +97,12 @@ References:  {
 
 Definitions:  {
 	Version: 100
-	Count: 9
+	Count: 11
 	ObjectType: "GlobalSettings" {
 		Count: 1
 	}
 	ObjectType: "Model" {
-		Count: 4
+		Count: 5
 		PropertyTemplate: "FbxNode" {
 			Properties70:  {
 				P: "QuaternionInterpolate", "enum", "", "",0
@@ -180,7 +180,7 @@ Definitions:  {
 		}
 	}
 	ObjectType: "Geometry" {
-		Count: 4
+		Count: 5
 		PropertyTemplate: "FbxMesh" {
 			Properties70:  {
 				P: "Color", "ColorRGB", "Color", "",0.8,0.8,0.8
@@ -198,7 +198,7 @@ Definitions:  {
 ;------------------------------------------------------------------
 
 Objects:  {
-	Geometry: 1897867603984, "Geometry::", "Mesh" {
+	Geometry: 1896952225104, "Geometry::", "Mesh" {
 		Properties70:  {
 			P: "Color", "ColorRGB", "Color", "",0.443137254901961,0.529411764705882,0.0235294117647059
 		}
@@ -248,7 +248,7 @@ Objects:  {
 			}
 		}
 	}
-	Geometry: 1897867602640, "Geometry::", "Mesh" {
+	Geometry: 1896952225552, "Geometry::", "Mesh" {
 		Properties70:  {
 			P: "Color", "ColorRGB", "Color", "",0.443137254901961,0.529411764705882,0.0235294117647059
 		}
@@ -302,7 +302,7 @@ Objects:  {
 			}
 		}
 	}
-	Geometry: 1897867604432, "Geometry::", "Mesh" {
+	Geometry: 1896952226000, "Geometry::", "Mesh" {
 		Properties70:  {
 			P: "Color", "ColorRGB", "Color", "",0.549019607843137,0.345098039215686,0.882352941176471
 		}
@@ -352,7 +352,7 @@ Objects:  {
 			}
 		}
 	}
-	Geometry: 1897867603536, "Geometry::", "Mesh" {
+	Geometry: 1896952240336, "Geometry::", "Mesh" {
 		Properties70:  {
 			P: "Color", "ColorRGB", "Color", "",0.105882352941176,0.694117647058824,0.105882352941176
 		}
@@ -416,11 +416,72 @@ Objects:  {
 			}
 		}
 	}
-	Model: 1897744291552, "Model::Object001", "Mesh" {
+	Geometry: 1896952239888, "Geometry::", "Mesh" {
+		Properties70:  {
+			P: "Color", "ColorRGB", "Color", "",0.894117647058824,0.83921568627451,0.6
+		}
+		Vertices: *36 {
+			a: -44718.203125,-198177.9375,0,44718.203125,-198177.9375,0,-44718.203125,198177.9375,0,44718.203125,198177.9375,0,44718.203125,-198177.9375,15827.29296875,30264.197265625,-198177.9375,30281.298828125,30264.197265625,198177.9375,30281.298828125,44718.203125,198177.9375,15827.29296875,-44718.203125,198177.9375,15827.29296875,-30264.197265625,198177.9375,30281.298828125,-30264.197265625,-198177.9375,30281.298828125,-44718.203125,-198177.9375,15827.29296875
+		} 
+		PolygonVertexIndex: *60 {
+			a: 0,2,-4,3,1,-1,5,6,-10,9,10,-6,1,4,-6,5,10,-12,1,5,-12,0,1,-12,3,7,-5,4,1,-4,2,8,-10,9,6,-8,2,9,-8,3,2,-8,0,11,-9,8,2,-1,6,5,-5,4,7,-7,10,9,-9,8,11,-11
+		} 
+		Edges: *30 {
+			a: 0,1,2,3,4,6,7,8,9,10,12,13,14,16,17,20,23,24,25,26,30,31,32,34,35,38,43,44,50,56
+		} 
+		GeometryVersion: 124
+		LayerElementNormal: 0 {
+			Version: 102
+			Name: ""
+			MappingInformationType: "ByPolygonVertex"
+			ReferenceInformationType: "Direct"
+			Normals: *180 {
+				a: 0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,0.999999940395355,0,0,1,0,0,0.999999940395355,0,0,0.999999940395355,0,0,1,0,0,0.999999940395355,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,0.70710676908493,0,0.70710676908493,0.70710676908493,0,0.70710676908493,0.70710676908493,0,0.70710676908493,0.70710676908493,0,0.70710676908493,0.70710676908493,0,0.70710676908493,0.70710676908493,0,0.70710676908493,-0.70710676908493,0,0.70710676908493,-0.70710676908493,0,0.70710676908493,-0.70710676908493,0,0.70710676908493,-0.70710676908493,0,0.70710676908493,-0.70710676908493,0,0.70710676908493,-0.70710676908493,0,0.70710676908493
+			} 
+			NormalsW: *60 {
+				a: 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+			} 
+		}
+		LayerElementUV: 0 {
+			Version: 101
+			Name: "UVChannel_1"
+			MappingInformationType: "ByPolygonVertex"
+			ReferenceInformationType: "IndexToDirect"
+			UV: *70 {
+				a: 45.2182464599609,-197.67790222168,-44.2181549072266,-197.677932739258,45.2181549072266,198.677932739258,-44.2182464599609,198.67790222168,45.2181549072266,1.18664264678955,30.7641468048096,-197.677917480469,30.7642421722412,198.677917480469,198.67790222168,1.18664264678955,45.2181549072266,1.18664264678955,-29.7641468048096,198.677917480469,-29.7642421722412,-197.677917480469,-44.2182464599609,1.18664264678955,-44.2182464599609,-14.6406488418579,45.2181549072266,-14.6406488418579,30.7641468048096,15.6406488418579,-29.7642421722412,15.6406488418579,-197.677932739258,-14.6406488418579,198.67790222168,-14.6406488418579,-197.677932739258,1.18664264678955,-44.2182464599609,-14.6406488418579,45.2181549072266,-14.6406488418579,30.7641468048096,15.6406488418579,-29.7642421722412,15.6406488418579,-44.2182464599609,1.18664264678955,-197.677932739258,-14.6406488418579,198.67790222168,-14.6406488418579,198.67790222168,1.18664264678955,-197.677932739258,1.18664264678955,198.677917480469,15.6406488418579,-197.677917480469,15.6406488418579,-197.677932739258,1.18664264678955,198.677917480469,15.6406488418579,-197.677917480469,15.6406488418579,-197.677932739258,1.18664264678955,198.67790222168,1.18664264678955
+			} 
+			UVIndex: *60 {
+				a: 0,2,3,3,1,0,5,6,9,9,10,5,13,4,14,14,15,11,13,14,11,12,13,11,17,7,18,18,16,17,20,8,21,21,22,23,20,21,23,19,20,23,25,26,27,27,24,25,28,29,30,30,7,28,31,32,33,33,34,31
+			} 
+		}
+		LayerElementVisibility: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "ByEdge"
+			ReferenceInformationType: "Direct"
+			Visibility: *30 {
+				a: 1,1,0,1,1,1,1,0,1,1,1,1,0,1,0,0,1,1,1,0,1,1,0,1,0,0,1,0,0,0
+			} 
+		}
+		Layer: 0 {
+			Version: 100
+			LayerElement:  {
+				Type: "LayerElementNormal"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementVisibility"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementUV"
+				TypedIndex: 0
+			}
+		}
+	}
+	Model: 1898253126960, "Model::Object001", "Mesh" {
 		Version: 232
 		Properties70:  {
-			P: "PreRotation", "Vector3D", "Vector", "",-90,-0,0
-			P: "RotationActive", "bool", "", "",1
 			P: "InheritType", "enum", "", "",1
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
 			P: "DefaultAttributeIndex", "int", "Integer", "",0
@@ -429,11 +490,9 @@ Objects:  {
 		Shading: T
 		Culling: "CullingOff"
 	}
-	Model: 1897744287168, "Model::Object002", "Mesh" {
+	Model: 1898253140112, "Model::Object002", "Mesh" {
 		Version: 232
 		Properties70:  {
-			P: "PreRotation", "Vector3D", "Vector", "",-90,-0,0
-			P: "RotationActive", "bool", "", "",1
 			P: "InheritType", "enum", "", "",1
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
 			P: "DefaultAttributeIndex", "int", "Integer", "",0
@@ -442,32 +501,40 @@ Objects:  {
 		Shading: T
 		Culling: "CullingOff"
 	}
-	Model: 1897744289360, "Model::Plane001", "Mesh" {
+	Model: 1898253113808, "Model::Plane001", "Mesh" {
 		Version: 232
 		Properties70:  {
-			P: "PreRotation", "Vector3D", "Vector", "",-90,-0,0
-			P: "RotationActive", "bool", "", "",1
 			P: "InheritType", "enum", "", "",1
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
 			P: "DefaultAttributeIndex", "int", "Integer", "",0
-			P: "Lcl Translation", "Lcl Translation", "", "A",-290079.625,0,880021
+			P: "Lcl Translation", "Lcl Translation", "", "A",-290079.625,-880021,0
 			P: "MaxHandle", "int", "Integer", "UH",6
 		}
 		Shading: T
 		Culling: "CullingOff"
 	}
-	Model: 1898481774000, "Model::Policay", "Mesh" {
+	Model: 1898253116000, "Model::Policay", "Mesh" {
 		Version: 232
 		Properties70:  {
-			P: "PreRotation", "Vector3D", "Vector", "",-90,-0,0
-			P: "RotationActive", "bool", "", "",1
 			P: "InheritType", "enum", "", "",1
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
 			P: "GeometricTranslation", "Vector3D", "Vector", "",0,0.99249267578125,-1332.00500488281
 			P: "DefaultAttributeIndex", "int", "Integer", "",0
-			P: "Lcl Translation", "Lcl Translation", "", "A",-6277.5,-0.992401123046875,-0
+			P: "Lcl Translation", "Lcl Translation", "", "A",-6277.5,0,-0.992401123046875
 			P: "Lcl Rotation", "Lcl Rotation", "", "A",89.9999956742889,-0,179.999994991044
 			P: "MaxHandle", "int", "Integer", "UH",8
+		}
+		Shading: T
+		Culling: "CullingOff"
+	}
+	Model: 1898253129152, "Model::Box001", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,0,-34638.75
+			P: "MaxHandle", "int", "Integer", "UH",9
 		}
 		Shading: T
 		Culling: "CullingOff"
@@ -480,26 +547,32 @@ Objects:  {
 Connections:  {
 	
 	;Model::Object001, Model::RootNode
-	C: "OO",1897744291552,0
+	C: "OO",1898253126960,0
 	
 	;Model::Object002, Model::RootNode
-	C: "OO",1897744287168,0
+	C: "OO",1898253140112,0
 	
 	;Model::Plane001, Model::RootNode
-	C: "OO",1897744289360,0
+	C: "OO",1898253113808,0
 	
 	;Model::Policay, Model::RootNode
-	C: "OO",1898481774000,0
+	C: "OO",1898253116000,0
+	
+	;Model::Box001, Model::RootNode
+	C: "OO",1898253129152,0
 	
 	;Geometry::, Model::Object001
-	C: "OO",1897867603984,1897744291552
+	C: "OO",1896952225104,1898253126960
 	
 	;Geometry::, Model::Object002
-	C: "OO",1897867602640,1897744287168
+	C: "OO",1896952225552,1898253140112
 	
 	;Geometry::, Model::Plane001
-	C: "OO",1897867604432,1897744289360
+	C: "OO",1896952226000,1898253113808
 	
 	;Geometry::, Model::Policay
-	C: "OO",1897867603536,1898481774000
+	C: "OO",1896952240336,1898253116000
+	
+	;Geometry::, Model::Box001
+	C: "OO",1896952239888,1898253129152
 }
