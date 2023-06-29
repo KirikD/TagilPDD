@@ -13048,8 +13048,8 @@ MonoBehaviour:
     vertexColor: {r: 1, g: 1, b: 1, a: 1}
   - roadTypeName: 
     id: 0
-    timestamp: 1686807904.8743508
-    roadWidth: 6
+    timestamp: 1688021329.8746371
+    roadWidth: 4
     faceDistance: 2
     angleTreshold: 0
     uvTiling: 0
@@ -13061,8 +13061,8 @@ MonoBehaviour:
     roadShapeDataActive: 0
     roadShapeData:
       nodes:
-      - {x: -3, y: 0}
-      - {x: 3, y: 0}
+      - {x: -2, y: 0}
+      - {x: 2, y: 0}
       hardEdge: 0000
       priorityNodeIndexLeft: -1
       priorityNodeIndexRight: -1
@@ -13087,12 +13087,12 @@ MonoBehaviour:
     maxSpeed: 55
     speedLimit: 50
     roadShape:
-    - {x: -3, y: 0}
-    - {x: 3, y: 0}
+    - {x: -2, y: 0}
+    - {x: 2, y: 0}
     roadShapeExt: []
     roadShapeExt2:
-    - {x: -3, y: 0}
-    - {x: 3, y: 0}
+    - {x: -2, y: 0}
+    - {x: 2, y: 0}
     doConnectionTri: 0101
     doConnectionTriExt: 
     roadShapeUVs:
@@ -13117,88 +13117,18 @@ MonoBehaviour:
     crosswalkPrefab: {fileID: 0}
     crosswalkHeightOffset: 0
     crosswalkType: 1
-    roadMaterial: {fileID: 2100000, guid: e250fe7cb649e414b919fe3f488f56e7, type: 2}
+    roadMaterial: {fileID: 2100000, guid: f182e2714eb8a714a99ed091081ce16c, type: 2}
     roadMaterials: []
     roadPhysicsMaterial: {fileID: 0}
     roadPhysicsMaterials: []
-    connectionMaterial: {fileID: 2100000, guid: e250fe7cb649e414b919fe3f488f56e7,
+    connectionMaterial: {fileID: 2100000, guid: 3c555588afad81d428ad1704d5d015a7,
       type: 2}
     isSideObject: 0
     isCustomRoad: 0
     subSegments: 1
     soData: []
     soDataExt: []
-    soDataLog:
-    - id: 1686804052.0015876
-      active: 0
-    - id: 1686804081.714884
-      active: 0
-    - id: 1686804104.6885362
-      active: 0
-    - id: 1686307684.1414936
-      active: 0
-    - id: 1686803567.5880764
-      active: 0
-    - id: 1686803739.2774951
-      active: 0
-    - id: 1686803757.647145
-      active: 0
-    - id: 1686804025.798109
-      active: 0
-    - id: 1686307517.973775
-      active: 0
-    - id: 1686307748.6260912
-      active: 0
-    - id: 1686307572.054594
-      active: 0
-    - id: 1686579525.3449903
-      active: 0
-    - id: 1686245255.3504167
-      active: 0
-    - id: 1686579420.8302367
-      active: 0
-    - id: 1686579502.4224005
-      active: 0
-    - id: 1686575524.3100936
-      active: 0
-    - id: 1686578551.401746
-      active: 0
-    - id: 1686579439.4705617
-      active: 0
-    - id: 1686245148.210414
-      active: 0
-    - id: 1686583730.616751
-      active: 0
-    - id: 1686578705.6950347
-      active: 0
-    - id: 1686578447.7164423
-      active: 0
-    - id: 1686578684.7409978
-      active: 0
-    - id: 1686578516.7467632
-      active: 0
-    - id: 1686578569.6229713
-      active: 0
-    - id: 1686578609.2097604
-      active: 0
-    - id: 1686578634.449589
-      active: 0
-    - id: 1686733622.0013099
-      active: 0
-    - id: 1686271556.5676112
-      active: 0
-    - id: 1686807376.3367264
-      active: 0
-    - id: 1686271571.8325734
-      active: 0
-    - id: 1686311021.7306743
-      active: 0
-    - id: 1686245154.8319762
-      active: 0
-    - id: 1686245263.7859058
-      active: 0
-    - id: 1686307701.1834993
-      active: 0
+    soDataLog: []
     layer: 0
     isStatic: 0
     tag: Untagged

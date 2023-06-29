@@ -254,7 +254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WheelColliders:
   - {fileID: 5263590300417578943}
-  - {fileID: 5263590300417578943}
+  - {fileID: 7940757561131399794}
   - {fileID: 398054557133992521}
   - {fileID: 7250196674078120874}
   tireMeshes:
