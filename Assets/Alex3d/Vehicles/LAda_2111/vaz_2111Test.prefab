@@ -6358,7 +6358,7 @@ MonoBehaviour:
   Gearbox:
     ChangeUpGearTime: 0.2
     ChangeDownGearTime: 0.1
-    AutomaticGearBox: 0
+    AutomaticGearBox: 1
     GearsRatio:
     - 3.59
     - 2.02
