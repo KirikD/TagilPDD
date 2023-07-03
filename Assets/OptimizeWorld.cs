@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEditor;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class OptimizeWorld : MonoBehaviour
 {
     public float GlobalDistance = 300;
@@ -19,7 +19,7 @@ public class OptimizeWorld : MonoBehaviour
 
         return objectsInScene;
     }
-    // Исключения из скрытия
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
 
 
@@ -29,12 +29,24 @@ public class OptimizeWorld : MonoBehaviour
     {
         allObjects = GetAllObjectsOnlyInScene().ToArray();
         Cam = Camera.main.gameObject.transform;
+        if (SceneManager.GetSceneByBuildIndex(2).IsValid() == false)
+            SceneManager.LoadSceneAsync("Tagil_Buildnings", LoadSceneMode.Additive);
+
+        if (SceneManager.GetSceneByBuildIndex(1).IsValid() == false)
+            SceneManager.LoadSceneAsync("Tagil_Ways", LoadSceneMode.Additive);
+        Invoke("OptimizeAll", 10);
+    }
+    bool enablerUpdate = false;
+    void OptimizeAll()
+    {
+        allObjects = GetAllObjectsOnlyInScene().ToArray();
+        Cam = Camera.main.gameObject.transform;
         print(Cam.gameObject.name + " is an active object");
 
         for (int i = 0; i < allObjects.Length; i++)
         {
             if (allObjects[i].GetComponent<MeshRenderer>() != null && allObjects[i].gameObject.tag == "WorldObjs") //
-            { 
+            {
                 Opt.Add(allObjects[i].GetComponent<MeshRenderer>());
 
             }
@@ -44,14 +56,14 @@ public class OptimizeWorld : MonoBehaviour
         coords = new Vector3[Opt.Count];
         for (int ii = 0; ii < Opt.Count; ii++)
         {
-            Bounds Bou =  Opt[ii].GetComponent<MeshFilter>().mesh.bounds;
+            Bounds Bou = Opt[ii].GetComponent<MeshFilter>().mesh.bounds;
             coords[ii] = Bou.center;
             float dist = math.distance(Cam.position, Opt[ii].transform.TransformPoint(coords[ii]));
             if (dist > GlobalDistance)
             { Opt[ii].enabled = false; }
             else
                 Opt[ii].enabled = true;
-            
+
             /*GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
             sphere.transform.position = Opt[ii].transform.TransformPoint(coords[ii]);
             sphere.name = Opt[ii].name;
@@ -70,6 +82,7 @@ public class OptimizeWorld : MonoBehaviour
             group = null;
             lods = null;*/
         }
+        enablerUpdate = true;
     }
     void UpdHid()
     {
@@ -85,20 +98,21 @@ public class OptimizeWorld : MonoBehaviour
     public List<MeshRenderer> Opt = new List<MeshRenderer>();
     public Vector3[] coords;
     int adder = 0;
-     void FixedUpdate()
-     {
-         float dist = math.distance(Cam.position, Opt[adder].transform.TransformPoint(coords[adder]));
-         if (dist > GlobalDistance)
-         { Opt[adder].enabled = false; }
-         else
-             Opt[adder].enabled = true;
-         adder++;
-         if (adder > Opt.Count-1)
-             adder = 0;
+    void FixedUpdate()
+    { if (enablerUpdate) { 
+        float dist = math.distance(Cam.position, Opt[adder].transform.TransformPoint(coords[adder]));
+        if (dist > GlobalDistance)
+        { Opt[adder].enabled = false; }
+        else
+            Opt[adder].enabled = true;
+        adder++;
+        if (adder > Opt.Count - 1)
+            adder = 0;
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
             UpdHid();
         }
-    }
+    } 
+}
 }

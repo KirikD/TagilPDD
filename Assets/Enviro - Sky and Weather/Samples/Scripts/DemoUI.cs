@@ -43,7 +43,7 @@ public class DemoUI : MonoBehaviour {
 
             EnviroSkyMgr.instance.ChangeSeason(EnviroSeasons.Seasons.Spring);
             EnviroSkyMgr.instance.useFlatClouds = true;
-            EnviroSkyMgr.instance.ChangeWeather(0);
+			try { EnviroSkyMgr.instance.ChangeWeather(0); } catch { }
             EnviroSkyMgr.instance.SetTimeOfDay(7);
         }
 		
