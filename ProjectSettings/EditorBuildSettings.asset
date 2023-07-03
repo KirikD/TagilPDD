@@ -5,7 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
+    path: Assets/Tagil_main.unity
+    guid: bcdfcdcd15be22444a22127bc8c640d8
+  - enabled: 1
+    path: Assets/Tagil_Ways.unity
+    guid: 5a151f127fb1be34ab256451477a81d9
+  - enabled: 1
+    path: Assets/Tagil_Buildnings.unity
+    guid: 49c846006d2ace5448bd3e2d969243e8
+  - enabled: 1
     path: Assets/UTS_PRO/Scenes/Standard_Crossroad.unity
     guid: 70bae495e1e414f4c8fed3822d3291eb
   - enabled: 1
