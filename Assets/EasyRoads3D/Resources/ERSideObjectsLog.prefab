@@ -13183,9 +13183,9 @@ MonoBehaviour:
     vertexColor: {r: 0, g: 0, b: 0, a: 0}
   - roadTypeName: RussianRoad_2 Lines_A
     id: 1686561777.652488
-    timestamp: 1686733574.8321042
+    timestamp: 1688532424.6840487
     roadWidth: 2
-    faceDistance: 1
+    faceDistance: 6
     angleTreshold: 45
     uvTiling: 1
     uv4Type: 0
@@ -13276,61 +13276,7 @@ MonoBehaviour:
     subSegments: 1
     soData: []
     soDataExt: []
-    soDataLog:
-    - id: 1686307517.973775
-      active: 0
-    - id: 1686307684.1414936
-      active: 0
-    - id: 1686307748.6260912
-      active: 0
-    - id: 1686307572.054594
-      active: 0
-    - id: 1686579525.3449903
-      active: 0
-    - id: 1686245255.3504167
-      active: 0
-    - id: 1686579420.8302367
-      active: 0
-    - id: 1686579502.4224005
-      active: 0
-    - id: 1686575524.3100936
-      active: 0
-    - id: 1686578551.401746
-      active: 0
-    - id: 1686579439.4705617
-      active: 0
-    - id: 1686245148.210414
-      active: 0
-    - id: 1686583730.616751
-      active: 0
-    - id: 1686578705.6950347
-      active: 0
-    - id: 1686578447.7164423
-      active: 0
-    - id: 1686578684.7409978
-      active: 0
-    - id: 1686578516.7467632
-      active: 0
-    - id: 1686578569.6229713
-      active: 0
-    - id: 1686578609.2097604
-      active: 0
-    - id: 1686578634.449589
-      active: 0
-    - id: 1686733622.0013099
-      active: 0
-    - id: 1686271556.5676112
-      active: 0
-    - id: 1686271571.8325734
-      active: 0
-    - id: 1686311021.7306743
-      active: 0
-    - id: 1686245154.8319762
-      active: 0
-    - id: 1686245263.7859058
-      active: 0
-    - id: 1686307701.1834993
-      active: 0
+    soDataLog: []
     layer: 0
     isStatic: 1
     tag: Untagged
