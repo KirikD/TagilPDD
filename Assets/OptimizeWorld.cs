@@ -35,6 +35,9 @@ public class OptimizeWorld : MonoBehaviour
         if (SceneManager.GetSceneByBuildIndex(1).IsValid() == false)
             SceneManager.LoadSceneAsync("Tagil_Ways", LoadSceneMode.Additive);
         Invoke("OptimizeAll", 10);
+
+
+        InvokeRepeating("UpdHid", 20.0f, 5.3f);
     }
     bool enablerUpdate = false;
     void OptimizeAll()
