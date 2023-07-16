@@ -60,6 +60,6 @@ Material:
     - _QueueOffset: 0
     - _RefractStrength: 0.27
     m_Colors:
-    - _IceColor: {r: 0.1098039, g: 1.145098, b: 2, a: 1}
+    - _IceColor: {r: 3.5648696, g: 3.5648696, b: 3.5648696, a: 1}
     - _IceTiling: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
