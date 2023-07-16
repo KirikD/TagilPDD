@@ -6,6 +6,7 @@ using System.Linq;
 using UnityEngine.InputSystem.Users;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem.Controls;
+using System;
 
 namespace PG
 {
@@ -44,10 +45,15 @@ namespace PG
 
         public static int GamepadP1no;
         public static int GamepadP2no;
-
+        bool onOff = true;
         private void Update ()
         {
-            Horizontal = Mathf.MoveTowards (Horizontal, TargetHorizontal, Time.deltaTime * HorizontalChangeSpeed);
+            if (Input.GetKeyDown(KeyCode.Space))        onOff = true;
+            if (Input.GetKeyDown(KeyCode.J))
+            {   if (onOff == true)
+                {   HandBrake = true;   onOff = false; } else { HandBrake = false; onOff = true; } } 
+
+                        Horizontal = Mathf.MoveTowards (Horizontal, TargetHorizontal, Time.deltaTime * HorizontalChangeSpeed);
 
             var touchScreen = Touchscreen.current;
 
