@@ -22,10 +22,10 @@ public class RainAndSnowControl : MonoBehaviour
 
         //Initialize the Text to say whether the Toggle is in a positive or negative state
         m_ToggleGearBox.onValueChanged.AddListener(delegate {
-            ToggleValueChangedRain(m_ToggleRain);
+            ToggleValueChangedGearBox(m_ToggleGearBox);
         });
         m_ToggleAdd.onValueChanged.AddListener(delegate {
-            ToggleValueChangedSnow(m_ToggleSnow);
+            ToggleValueChangedAdd(m_ToggleAdd);
         });
     }
 
@@ -50,7 +50,7 @@ public class RainAndSnowControl : MonoBehaviour
     public CarController CC;
     void ToggleValueChangedGearBox(Toggle change)
     {
-        m_TextRain.text = "Дождь " + m_ToggleGearBox.isOn;
+        m_TextGearBox.text = "Коробка: " + m_ToggleGearBox.isOn;
         if (m_ToggleGearBox.isOn)
         { CC.GearOff(true); }
         if (m_ToggleGearBox.isOn == false)
@@ -58,7 +58,7 @@ public class RainAndSnowControl : MonoBehaviour
     }
     void ToggleValueChangedAdd(Toggle change)
     {
-        m_TextAdd.text = "Снег is : " + m_ToggleAdd.isOn;
+        m_TextAdd.text = "Добавка is : " + m_ToggleAdd.isOn;
         if (m_ToggleAdd.isOn)
         { Snow.SetActive(true); }
         if (m_ToggleAdd.isOn == false)
