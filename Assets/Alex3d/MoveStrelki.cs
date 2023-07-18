@@ -24,7 +24,7 @@ public class MoveStrelki : MonoBehaviour
             { InvokeRepeating("StartStrelki", 2.0f, 5.0f); matGlass.SetFloat("_FresnelStrength", 0.5f);  onOff = false; }
             else { CancelInvoke("StartStrelki"); matGlass.SetFloat("_FresnelStrength", 0);  onOff = true; }
         }        
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKeyDown(KeyCode.M))
         {
             if (onOffFara == true)
             { FaraA.SetActive(true); FaraB.SetActive(true); onOffFara = false; }

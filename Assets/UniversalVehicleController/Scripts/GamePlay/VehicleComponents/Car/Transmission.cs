@@ -55,9 +55,17 @@ namespace PG
 
             DriveWheels = driveWheels.ToArray ();
         }
-
+        bool onOff = true;
         void FixedUpdateTransmition ()
         {
+            
+            if (Input.GetKeyDown(KeyCode.B))
+            {
+                if (onOff == true)
+                { Gearbox.AutomaticGearBox = true; onOff = false; }
+                else { Gearbox.AutomaticGearBox = false; onOff = true; }
+            }
+
             if (!Mathf.Approximately (CurrentAcceleration, 0) && (Gearbox.HasRGear || CurrentGear >= 0))
             {
                 var motorTorque = CurrentAcceleration * (CurrentMotorTorque * (MaxMotorTorque * AllGearsRatio[CurrentGearIndex]));
