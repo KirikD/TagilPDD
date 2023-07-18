@@ -52,9 +52,9 @@ public class RainAndSnowControl : MonoBehaviour
     {
         m_TextRain.text = "Дождь " + m_ToggleGearBox.isOn;
         if (m_ToggleGearBox.isOn)
-        { CC.Gearbox.AutomaticGearBox = true; }
+        { CC.GearOff(true); }
         if (m_ToggleGearBox.isOn == false)
-        { CC.Gearbox.AutomaticGearBox = false; }
+        { CC.GearOff(false); }
     }
     void ToggleValueChangedAdd(Toggle change)
     {
