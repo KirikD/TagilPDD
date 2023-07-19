@@ -56,14 +56,15 @@ namespace PG
             DriveWheels = driveWheels.ToArray ();
         }
         bool onOff = true;
+        public void GearOff(bool onOff) { Gearbox.AutomaticGearBox = onOff; }
         void FixedUpdateTransmition ()
         {
             
             if (Input.GetKeyDown(KeyCode.B))
             {
                 if (onOff == true)
-                { Gearbox.AutomaticGearBox = true; onOff = false; }
-                else { Gearbox.AutomaticGearBox = false; onOff = true; }
+                { Gearbox.AutomaticGearBox = true;  Debug.Log("AutoR"); onOff = false; }
+                else { Gearbox.AutomaticGearBox = false; Debug.Log("HandsR");  onOff = true; }
             }
 
             if (!Mathf.Approximately (CurrentAcceleration, 0) && (Gearbox.HasRGear || CurrentGear >= 0))
