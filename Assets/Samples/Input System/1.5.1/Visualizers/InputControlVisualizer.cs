@@ -159,7 +159,7 @@ namespace UnityEngine.InputSystem.Samples
 
             SetupVisualizer();
         }
-
+        
         private void SetupVisualizer()
         {
             if (m_Control == null)
@@ -293,19 +293,35 @@ namespace UnityEngine.InputSystem.Samples
                 component.OnEventImpl(eventPtr, device);
             }
         }
-
+        /// <summary>
+        /// <Joystick>/stick/x  | -1 РУЛЬ
+        /// <Joystick>/trigger  | 1 А  кнопка
+        /// <HID::LiteStar EMSI FORCE RACING WHEEL>/button2  | 0   B кнопка
+        /// </summary>
+        public string RealNameAxis;
+        public bool rul;
+        public float OutFloat;
         private unsafe void OnEventImpl(InputEventPtr eventPtr, InputDevice device)
         {
             switch (m_Visualization)
             {
                 case Mode.Value:
-                {
+                {     OutFloat = 0; //Debug.Log("Deb" + m_ControlPath );
                     var statePtr = m_Control.GetStatePtrFromStateEvent(eventPtr);
                     if (statePtr == null)
                         return; // No value for control in event.
                     var value = m_Control.ReadValueFromStateAsObject(statePtr);
                     m_Visualizer.AddSample(value, eventPtr.time);
-                    break;
+                        if (RealNameAxis == m_ControlPath && rul && (float)value < 1 && (float)value > -1)
+                        {
+                            if ((float)value < 0)
+                            { OutFloat = ((float)value + 1); Debug.Log(m_ControlPath + "  | " + ((float)value + 1)); }
+                            if ((float)value > 0)
+                            { OutFloat = ((float)value - 1);  Debug.Log(m_ControlPath + "  | " + ((float)value - 1)); }
+                        }
+                        if (RealNameAxis == m_ControlPath && rul == false && (float)value > 0)
+                        { OutFloat = (float)value;  Debug.Log(m_ControlPath + "  | " + (float)value); }
+                        break;
                 }
 
                 case Mode.Events:

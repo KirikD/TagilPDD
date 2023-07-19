@@ -284,6 +284,7 @@ LightingSettings:
   m_PVRFilteringAtrousPositionSigmaAO: 1
   m_PVRTiledBaking: 0
   m_NumRaysToShootPerTexel: -1
+  m_RespectSceneVisibilityWhenBakingGI: 0
 --- !u!1 &1615874397
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,6 +341,9 @@ MonoBehaviour:
   m_Visualization: 8
   m_ControlPath: <Gamepad>/buttonEast
   m_ControlIndex: 0
+  RealNameAxis: 
+  rul: 0
+  OutFloat: 0
 --- !u!1001 &5430831075364511436
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -348,6 +352,36 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5430831073950378564, guid: b8429651427a640919754290f3704312,
+        type: 3}
+      propertyPath: RealNameAxis
+      value: <HID::LiteStar EMSI FORCE RACING WHEEL>/button4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5430831073950378564, guid: b8429651427a640919754290f3704312,
+        type: 3}
+      propertyPath: m_ControlPath
+      value: <HID::LiteStar EMSI FORCE RACING WHEEL>/button4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5430831074890777048, guid: b8429651427a640919754290f3704312,
+        type: 3}
+      propertyPath: RealNameAxis
+      value: <HID::LiteStar EMSI FORCE RACING WHEEL>/button3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5430831074890777048, guid: b8429651427a640919754290f3704312,
+        type: 3}
+      propertyPath: m_ControlPath
+      value: <HID::LiteStar EMSI FORCE RACING WHEEL>/button3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5430831074908778959, guid: b8429651427a640919754290f3704312,
+        type: 3}
+      propertyPath: RealNameAxis
+      value: <HID::LiteStar EMSI FORCE RACING WHEEL>/button2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5430831074908778959, guid: b8429651427a640919754290f3704312,
+        type: 3}
+      propertyPath: m_ControlPath
+      value: <HID::LiteStar EMSI FORCE RACING WHEEL>/button2
+      objectReference: {fileID: 0}
     - target: {fileID: 5430831075476541849, guid: b8429651427a640919754290f3704312,
         type: 3}
       propertyPath: m_Name
@@ -407,6 +441,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5430831075516136799, guid: b8429651427a640919754290f3704312,
+        type: 3}
+      propertyPath: rul
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5430831075516136799, guid: b8429651427a640919754290f3704312,
+        type: 3}
+      propertyPath: RealNameAxis
+      value: <Joystick>/stick/x
+      objectReference: {fileID: 0}
+    - target: {fileID: 5430831075516136799, guid: b8429651427a640919754290f3704312,
+        type: 3}
+      propertyPath: m_ControlPath
+      value: <Joystick>/stick/x
+      objectReference: {fileID: 0}
+    - target: {fileID: 5430831075516136799, guid: b8429651427a640919754290f3704312,
+        type: 3}
+      propertyPath: m_ControlIndex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5430831075990510035, guid: b8429651427a640919754290f3704312,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5430831075990510060, guid: b8429651427a640919754290f3704312,
+        type: 3}
+      propertyPath: RealNameAxis
+      value: <Joystick>/trigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 5430831075990510060, guid: b8429651427a640919754290f3704312,
+        type: 3}
+      propertyPath: m_ControlPath
+      value: <Joystick>/trigger
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
