@@ -113,12 +113,14 @@ namespace UnityEngine.InputSystem.Samples
 
             base.OnDisable();
         }
-
+        void HidgeGuiAll() { gui = false; }
+        void Start() { Invoke(nameof(HidgeGuiAll),UnityEngine.Random.Range(0,20.0f)); }
+        public  bool gui = true;
         protected new void OnGUI()
         {
             if (m_Visualization == Mode.None)
                 return;
-
+            if (gui)
             base.OnGUI();
         }
 
