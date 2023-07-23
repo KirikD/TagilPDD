@@ -7,13 +7,14 @@ using UnityEngine.InputSystem.Users;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem.Controls;
 using System;
+using UnityEngine.InputSystem.LowLevel;
 
 namespace PG
 {
     /// <summary>
     /// For user multiplatform control. This way of implementing the input is chosen to be able to implement control of several players for one device.
     /// </summary>
-    public class CarControllerInput :InitializePlayer, ICarControl
+    public class CarControllerInput : InitializePlayer, ICarControl
     {
         public float HorizontalChangeSpeed = 10;            //To simulate the use of a keyboard trigger.
         public bool RotateCameraWithMousePressed;
@@ -46,14 +47,14 @@ namespace PG
         public static int GamepadP1no;
         public static int GamepadP2no;
         bool onOff = true;
-        private void Update ()
+        private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Space))        onOff = true;
+            if (Input.GetKeyDown(KeyCode.Space)) onOff = true;
             if (Input.GetKeyDown(KeyCode.J))
-            {   if (onOff == true)
-                {   HandBrake = true;   onOff = false; } else { HandBrake = false; onOff = true; } } 
+            { if (onOff == true)
+                { HandBrake = true; onOff = false; } else { HandBrake = false; onOff = true; } }
 
-                        Horizontal = Mathf.MoveTowards (Horizontal, TargetHorizontal, Time.deltaTime * HorizontalChangeSpeed);
+            Horizontal = Mathf.MoveTowards(Horizontal, TargetHorizontal, Time.deltaTime * HorizontalChangeSpeed);
 
             var touchScreen = Touchscreen.current;
 
@@ -66,11 +67,11 @@ namespace PG
                 var touchCount = touchScreen.touches.Count(t => t.isInProgress);
                 if (touchCount != TouchCount)
                 {
-                    TouchesInProgress = touchScreen.touches.Where (t => t.isInProgress).ToList ();
+                    TouchesInProgress = touchScreen.touches.Where(t => t.isInProgress).ToList();
                     if (touchCount > TouchCount && !ManualCameraRotation)
                     {
-                        var lastTouch = TouchesInProgress.Last (t => t.press.wasPressedThisFrame);
-                        if (!IsPointerOverUIObject (lastTouch))
+                        var lastTouch = TouchesInProgress.Last(t => t.press.wasPressedThisFrame);
+                        if (!IsPointerOverUIObject(lastTouch))
                         {
                             RotateTouch = lastTouch;
                             ManualCameraRotation = true;
@@ -83,7 +84,7 @@ namespace PG
                         RotateTouch = null;
                         for (int i = 0; i < touchCount; i++)
                         {
-                            if (!IsPointerOverUIObject (TouchesInProgress[i]))
+                            if (!IsPointerOverUIObject(TouchesInProgress[i]))
                             {
                                 RotateTouch = TouchesInProgress[i];
                                 ManualCameraRotation = true;
@@ -97,7 +98,7 @@ namespace PG
 
                 if (RotateTouch != null)
                 {
-                    ViewDelta = RotateTouch.delta.ReadValue ();
+                    ViewDelta = RotateTouch.delta.ReadValue();
                 }
             }
 
@@ -105,64 +106,64 @@ namespace PG
             {
                 if (Keyboard.current.f3Key.wasPressedThisFrame)
                 {
-                    GameController.Instance.RestartScene ();
+                    GameController.Instance.RestartScene();
                 }
 
                 if (!GameController.SplitScreen && Keyboard.current.nKey.wasPressedThisFrame)
                 {
-                    GameController.Instance.SetNextCar ();
+                    GameController.Instance.SetNextCar();
                 }
 
                 if (Keyboard.current.equalsKey.wasPressedThisFrame)
                 {
-                    GameController.Instance.ChangeTimeScale (0.1f);
+                    GameController.Instance.ChangeTimeScale(0.1f);
                 }
 
                 if (Keyboard.current.minusKey.wasPressedThisFrame)
                 {
-                    GameController.Instance.ChangeTimeScale (-0.1f);
+                    GameController.Instance.ChangeTimeScale(-0.1f);
                 }
             }
         }
 
-        private void OnDestroy ()
+        private void OnDestroy()
         {
             if (PlayerInputActions != null)
             {
-                PlayerInputActions.Disable ();
+                PlayerInputActions.Disable();
             }
 
-            OnRemoveActions.SafeInvoke ();
+            OnRemoveActions.SafeInvoke();
 
             if (User != null && !GameSettings.IsMobilePlatform && User.id != InputUser.InvalidId)
             {
-                User.UnpairDevicesAndRemoveUser ();
+                User.UnpairDevicesAndRemoveUser();
             }
         }
 
-        void OnSetPause (bool value)
+        void OnSetPause(bool value)
         {
             if (value)
             {
-                PlayerInputActions.Disable ();
+                PlayerInputActions.Disable();
             }
             else
             {
-                PlayerInputActions.Enable ();
+                PlayerInputActions.Enable();
             }
         }
 
-        public void PairWithDevice (InputDevice device)
+        public void PairWithDevice(InputDevice device)
         {
             if (device != null)
             {
-                User = InputUser.PerformPairingWithDevice (device, User);
+                User = InputUser.PerformPairingWithDevice(device, User);
             }
         }
 
-        public override bool Initialize (VehicleController car)
+        public override bool Initialize(VehicleController car)
         {
-            base.Initialize (car);
+            base.Initialize(car);
 
             if (GameController.SplitScreen)
             {
@@ -170,106 +171,106 @@ namespace PG
                 {
                     if (device is Keyboard)
                     {
-                        PairWithDevice (device);
+                        PairWithDevice(device);
                     }
                 }
 
                 if (GameController.PlayerCar1 == car)
                 {
                     IsFirstPlayer = true;
-                    PlayerInputActions = new P1Input ();
-                    PairWithDevice (Mouse.current);
+                    PlayerInputActions = new P1Input();
+                    PairWithDevice(Mouse.current);
 
                     int gamePadIndex = GamepadP1no - 1;
 
                     if (gamePadIndex >= 0 && gamePadIndex < Gamepad.all.Count)
                     {
-                        PairWithDevice (Gamepad.all[gamePadIndex]);
+                        PairWithDevice(Gamepad.all[gamePadIndex]);
                     }
 
                 }
                 else
                 {
-                    PlayerInputActions = new P2Input ();
+                    PlayerInputActions = new P2Input();
 
                     int gamePadIndex = GamepadP2no - 1;
 
                     if (gamePadIndex >= 0 && gamePadIndex < Gamepad.all.Count)
                     {
-                        PairWithDevice (Gamepad.all[gamePadIndex]);
+                        PairWithDevice(Gamepad.all[gamePadIndex]);
                     }
                 }
 
-                User.AssociateActionsWithUser (PlayerInputActions);
+                User.AssociateActionsWithUser(PlayerInputActions);
             }
             else
             {
-                PlayerInputActions = new P1Input ();
+                PlayerInputActions = new P1Input();
                 IsFirstPlayer = true;
             }
 
-            PlayerInputActions.Enable ();
+            PlayerInputActions.Enable();
             var actions = PlayerInputActions.ToList();
 
             InputAction action;
 
-            action = actions.Find (a => a.name == "Acceleration");
-            AddAction (action, OnAcceleration, InputActionPhase.Performed | InputActionPhase.Canceled);
+            action = actions.Find(a => a.name == "Acceleration");
+            AddAction(action, OnAcceleration, InputActionPhase.Performed | InputActionPhase.Canceled);
 
-            action = actions.Find (a => a.name == "BrakeReverse");
-            AddAction (action, OnBrakeReverse, InputActionPhase.Performed | InputActionPhase.Canceled);
+            action = actions.Find(a => a.name == "BrakeReverse");
+            AddAction(action, OnBrakeReverse, InputActionPhase.Performed | InputActionPhase.Canceled);
 
-            action = actions.Find (a => a.name == "Steer");
-            AddAction (action, OnSteer, InputActionPhase.Performed | InputActionPhase.Canceled);
+            action = actions.Find(a => a.name == "Steer");
+            AddAction(action, OnSteer, InputActionPhase.Performed | InputActionPhase.Canceled);
 
-            action = actions.Find (a => a.name == "Pitch");
-            AddAction (action, OnPitch, InputActionPhase.Performed | InputActionPhase.Canceled);
+            action = actions.Find(a => a.name == "Pitch");
+            AddAction(action, OnPitch, InputActionPhase.Performed | InputActionPhase.Canceled);
 
-            action = actions.Find (a => a.name == "NextGear");
-            AddAction (action, OnNextGear, InputActionPhase.Started);
+            action = actions.Find(a => a.name == "NextGear");
+            AddAction(action, OnNextGear, InputActionPhase.Started);
 
-            action = actions.Find (a => a.name == "PrevGear");
-            AddAction (action, OnPrevGear, InputActionPhase.Started);
+            action = actions.Find(a => a.name == "PrevGear");
+            AddAction(action, OnPrevGear, InputActionPhase.Started);
 
-            action = actions.Find (a => a.name == "Lights");
-            AddAction (action, OnLights, InputActionPhase.Started);
+            action = actions.Find(a => a.name == "Lights");
+            AddAction(action, OnLights, InputActionPhase.Started);
 
-            action = actions.Find (a => a.name == "LeftTurnSignal");
-            AddAction (action, OnLeftTurnSignal, InputActionPhase.Started);
+            action = actions.Find(a => a.name == "LeftTurnSignal");
+            AddAction(action, OnLeftTurnSignal, InputActionPhase.Started);
 
-            action = actions.Find (a => a.name == "RightTurnSignal");
-            AddAction (action, OnRightTurnSignal, InputActionPhase.Started);
+            action = actions.Find(a => a.name == "RightTurnSignal");
+            AddAction(action, OnRightTurnSignal, InputActionPhase.Started);
 
-            action = actions.Find (a => a.name == "Alarm");
-            AddAction (action, OnAlarm, InputActionPhase.Started);
+            action = actions.Find(a => a.name == "Alarm");
+            AddAction(action, OnAlarm, InputActionPhase.Started);
 
-            action = actions.Find (a => a.name == "ResetCar");
-            AddAction (action, OnResetCar, InputActionPhase.Started);
+            action = actions.Find(a => a.name == "ResetCar");
+            AddAction(action, OnResetCar, InputActionPhase.Started);
 
-            action = actions.Find (a => a.name == "RestoreCar");
-            AddAction (action, OnRestoreCar, InputActionPhase.Started);
+            action = actions.Find(a => a.name == "RestoreCar");
+            AddAction(action, OnRestoreCar, InputActionPhase.Started);
 
-            action = actions.Find (a => a.name == "ChangeView");
-            AddAction (action, OnChangeView, InputActionPhase.Started);
+            action = actions.Find(a => a.name == "ChangeView");
+            AddAction(action, OnChangeView, InputActionPhase.Started);
 
-            action = actions.Find (a => a.name == "ViewDelta");
-            AddAction (action, OnViewDelta, InputActionPhase.Performed | InputActionPhase.Canceled);
+            action = actions.Find(a => a.name == "ViewDelta");
+            AddAction(action, OnViewDelta, InputActionPhase.Performed | InputActionPhase.Canceled);
 
-            action = actions.Find (a => a.name == "HandBrake");
-            AddAction (action, OnHandBrake, InputActionPhase.Started | InputActionPhase.Canceled);
+            action = actions.Find(a => a.name == "HandBrake");
+            AddAction(action, OnHandBrake, InputActionPhase.Started | InputActionPhase.Canceled);
 
-            action = actions.Find (a => a.name == "Boost");
-            AddAction (action, OnBoost, InputActionPhase.Started | InputActionPhase.Canceled);
+            action = actions.Find(a => a.name == "Boost");
+            AddAction(action, OnBoost, InputActionPhase.Started | InputActionPhase.Canceled);
 
-            action = actions.Find (a => a.name == "ConnectTrailer");
-            AddAction (action, OnConnectTrailer, InputActionPhase.Started);
+            action = actions.Find(a => a.name == "ConnectTrailer");
+            AddAction(action, OnConnectTrailer, InputActionPhase.Started);
 
-            action = actions.Find (a => a.name == "EnterExit");
-            AddAction (action, OnTryExitFromCar, InputActionPhase.Started);
+            action = actions.Find(a => a.name == "EnterExit");
+            AddAction(action, OnTryExitFromCar, InputActionPhase.Started);
 
             if (Car)
             {
-                CarLighting = Car.GetComponent<CarLighting> ();
+                CarLighting = Car.GetComponent<CarLighting>();
                 var aiControl = Car.GetComponent<ICarControl>();
                 if (aiControl == null || !(aiControl is PositioningAIControl))
                 {
@@ -280,7 +281,7 @@ namespace PG
             return IsInitialized;
         }
 
-        public override void Uninitialize ()
+        public override void Uninitialize()
         {
             if (Car != null && Car.CarControl == this as ICarControl)
             {
@@ -289,23 +290,23 @@ namespace PG
 
             if (PlayerInputActions != null)
             {
-                PlayerInputActions.Disable ();
+                PlayerInputActions.Disable();
             }
 
-            OnRemoveActions.SafeInvoke ();
+            OnRemoveActions.SafeInvoke();
 
             if (User != null && !GameSettings.IsMobilePlatform && User.id != InputUser.InvalidId)
             {
-                User.UnpairDevicesAndRemoveUser ();
+                User.UnpairDevicesAndRemoveUser();
             }
 
             CarLighting = null;
-            base.Uninitialize ();
+            base.Uninitialize();
         }
 
-        void AddAction (InputAction action, InputActionDelegate actionDelegate, InputActionPhase phases)
+        void AddAction(InputAction action, InputActionDelegate actionDelegate, InputActionPhase phases)
         {
-            if (phases.HasFlag (InputActionPhase.Started))
+            if (phases.HasFlag(InputActionPhase.Started))
             {
                 action.started += actionDelegate.Invoke;
 
@@ -315,7 +316,7 @@ namespace PG
                 };
             }
 
-            if (phases.HasFlag (InputActionPhase.Performed))
+            if (phases.HasFlag(InputActionPhase.Performed))
             {
                 action.performed += actionDelegate.Invoke;
 
@@ -325,7 +326,7 @@ namespace PG
                 };
             }
 
-            if (phases.HasFlag (InputActionPhase.Canceled))
+            if (phases.HasFlag(InputActionPhase.Canceled))
             {
                 action.canceled += actionDelegate.Invoke;
 
@@ -338,93 +339,93 @@ namespace PG
 
         #region InputSystem actions
 
-        void OnAcceleration (InputAction.CallbackContext context)
+        void OnAcceleration(InputAction.CallbackContext context)
         {
-            SetAcceleration (context.ReadValue<float> ());
+            SetAcceleration(context.ReadValue<float>());
         }
 
-        void OnBrakeReverse (InputAction.CallbackContext context)
+        void OnBrakeReverse(InputAction.CallbackContext context)
         {
-            SetBrakeReverse (context.ReadValue<float> ());
+            SetBrakeReverse(context.ReadValue<float>());
         }
 
-        void OnSteer (InputAction.CallbackContext context)
+        void OnSteer(InputAction.CallbackContext context)
         {
-            SetSteer (context.ReadValue<float> ());
+            SetSteer(context.ReadValue<float>());
         }
 
-        void OnPitch (InputAction.CallbackContext context)
+        void OnPitch(InputAction.CallbackContext context)
         {
-            SetPitch (context.ReadValue<float> ());
+            SetPitch(context.ReadValue<float>());
         }
 
-        void OnNextGear (InputAction.CallbackContext context)
+        void OnNextGear(InputAction.CallbackContext context)
         {
-            NextGear ();
+            NextGear();
         }
 
-        void OnPrevGear (InputAction.CallbackContext context)
+        void OnPrevGear(InputAction.CallbackContext context)
         {
-            PrevGear ();
+            PrevGear();
         }
 
-        void OnLights (InputAction.CallbackContext context)
+        void OnLights(InputAction.CallbackContext context)
         {
-            SwitchLights ();
+            SwitchLights();
         }
 
-        void OnLeftTurnSignal (InputAction.CallbackContext context)
+        void OnLeftTurnSignal(InputAction.CallbackContext context)
         {
-            SwitchLeftTurnSignal ();
+            SwitchLeftTurnSignal();
         }
 
-        void OnRightTurnSignal (InputAction.CallbackContext context)
+        void OnRightTurnSignal(InputAction.CallbackContext context)
         {
-            SwitchRightTurnSignal ();
+            SwitchRightTurnSignal();
         }
 
-        void OnAlarm (InputAction.CallbackContext context)
+        void OnAlarm(InputAction.CallbackContext context)
         {
-            SwitchAlarm ();
+            SwitchAlarm();
         }
 
-        void OnConnectTrailer (InputAction.CallbackContext context)
+        void OnConnectTrailer(InputAction.CallbackContext context)
         {
-            ConnectTrailer ();
+            ConnectTrailer();
         }
 
-        void OnResetCar (InputAction.CallbackContext context)
+        void OnResetCar(InputAction.CallbackContext context)
         {
-            ResetCar ();
+            ResetCar();
         }
 
-        void OnRestoreCar (InputAction.CallbackContext context)
+        void OnRestoreCar(InputAction.CallbackContext context)
         {
-            RestoreCar ();
+            RestoreCar();
         }
 
-        void OnChangeView (InputAction.CallbackContext context)
+        void OnChangeView(InputAction.CallbackContext context)
         {
-            ChangeView ();
+            ChangeView();
         }
 
-        void OnTryExitFromCar (InputAction.CallbackContext context)
+        void OnTryExitFromCar(InputAction.CallbackContext context)
         {
-            TryExitFromCar ();
+            TryExitFromCar();
         }
 
-        void OnViewDelta (InputAction.CallbackContext context)
+        void OnViewDelta(InputAction.CallbackContext context)
         {
-            SetViewDelta (context.ReadValue<Vector2> ());
+            SetViewDelta(context.ReadValue<Vector2>());
             ViewDeltaFromGamepad = context.control.device is Gamepad;
         }
 
-        void OnHandBrake (InputAction.CallbackContext context)
+        void OnHandBrake(InputAction.CallbackContext context)
         {
             HandBrake = context.phase == InputActionPhase.Started;
         }
 
-        void OnBoost (InputAction.CallbackContext context)
+        void OnBoost(InputAction.CallbackContext context)
         {
             Boost = context.phase == InputActionPhase.Started;
         }
@@ -433,80 +434,142 @@ namespace PG
 
         #region Set input
 
-        public void SetAcceleration (float value)
+        public void SetAcceleration(float value)
         {
             Acceleration = value;
         }
 
-        public void SetBrakeReverse (float value)
+        public void SetBrakeReverse(float value)
         {
             BrakeReverse = value;
         }
 
-        public void SetSteer (float value)
+        public void SetSteer(float value)
         {
             TargetHorizontal = value;
         }
 
-        public void SetPitch (float value)
+        public void SetPitch(float value)
         {
             Pitch = value;
         }
 
-        public void NextGear ()
+        public void NextGear()
         {
             if (Car)
             {
-                Car.NextGear ();
+                Car.NextGear();
             }
         }
 
-        public void PrevGear ()
+        public void PrevGear()
         {
             if (Car)
             {
-                Car.PrevGear ();
+                Car.PrevGear();
             }
         }
 
-        public void SwitchLights ()
+        public void SwitchLights()
         {
-            CarLighting.SwitchMainLights ();
+            CarLighting.SwitchMainLights();
         }
 
-        public void SwitchLeftTurnSignal ()
+        public void SwitchLeftTurnSignal()
         {
-            CarLighting.TurnsEnable (TurnsStates.Left);
+            CarLighting.TurnsEnable(TurnsStates.Left);
         }
 
-        public void SwitchRightTurnSignal ()
+        public void SwitchRightTurnSignal()
         {
-            CarLighting.TurnsEnable (TurnsStates.Right);
+            CarLighting.TurnsEnable(TurnsStates.Right);
         }
 
-        public void SwitchAlarm ()
+        public void SwitchAlarm()
         {
-            CarLighting.TurnsEnable (TurnsStates.Alarm);
+            CarLighting.TurnsEnable(TurnsStates.Alarm);
         }
 
-        public void ConnectTrailer ()
+        public void ConnectTrailer()
         {
             if (Car)
             {
-                Car.TryConnectDisconnectTrailer ();
+                Car.TryConnectDisconnectTrailer();
             }
         }
 
-        public void ResetCar ()
+        public void ResetCar()
         {
-            Vehicle.ResetVehicle ();
+            Vehicle.ResetVehicle();
         }
 
-        public void RestoreCar ()
+        public void RestoreCar()
         {
-            Vehicle.RestoreVehicle ();
+            Vehicle.RestoreVehicle();
         }
-
+        public void PressBttKeyCameraCange()
+        {
+           Keyboard keyboard = InputSystem.GetDevice<Keyboard>();
+          Key[] pressedKeys = new Key[] { Key.C };
+          KeyboardState keyboardState = new KeyboardState(pressedKeys);
+          InputSystem.QueueStateEvent(keyboard, keyboardState);
+        }
+        public void PressBttKeyFara()
+        {
+            Keyboard keyboard = InputSystem.GetDevice<Keyboard>();
+            Key[] pressedKeys = new Key[] { Key.M };
+            KeyboardState keyboardState = new KeyboardState(pressedKeys);
+            InputSystem.QueueStateEvent(keyboard, keyboardState);
+        }
+        public void PressBttRuchnik()
+        {
+            Keyboard keyboard = InputSystem.GetDevice<Keyboard>();
+            Key[] pressedKeys = new Key[] { Key.J };
+            KeyboardState keyboardState = new KeyboardState(pressedKeys);
+            InputSystem.QueueStateEvent(keyboard, keyboardState);
+        }
+        public void PressBttKeyStrelki()
+        {
+            Keyboard keyboard = InputSystem.GetDevice<Keyboard>();
+            Key[] pressedKeys = new Key[] { Key.K };
+            KeyboardState keyboardState = new KeyboardState(pressedKeys);
+            InputSystem.QueueStateEvent(keyboard, keyboardState);
+        }
+        public void PressBttKeyAutoGear()
+        {
+            Keyboard keyboard = InputSystem.GetDevice<Keyboard>();
+            Key[] pressedKeys = new Key[] { Key.B };
+            KeyboardState keyboardState = new KeyboardState(pressedKeys);
+            InputSystem.QueueStateEvent(keyboard, keyboardState);
+        }
+        public void PressBttKeyPovLeft()
+        {
+            Keyboard keyboard = InputSystem.GetDevice<Keyboard>();
+            Key[] pressedKeys = new Key[] { Key.Q };
+            KeyboardState keyboardState = new KeyboardState(pressedKeys);
+            InputSystem.QueueStateEvent(keyboard, keyboardState);
+        }
+        public void PressBttKeyPovRight()
+        {
+            Keyboard keyboard = InputSystem.GetDevice<Keyboard>();
+            Key[] pressedKeys = new Key[] { Key.E };
+            KeyboardState keyboardState = new KeyboardState(pressedKeys);
+            InputSystem.QueueStateEvent(keyboard, keyboardState);
+        }
+        public void PressBttKeyVichod()
+        {
+            Keyboard keyboard = InputSystem.GetDevice<Keyboard>();
+            Key[] pressedKeys = new Key[] { Key.F };
+            KeyboardState keyboardState = new KeyboardState(pressedKeys);
+            InputSystem.QueueStateEvent(keyboard, keyboardState);
+        }
+        public void PressBttKeyGudock()
+        {
+            Keyboard keyboard = InputSystem.GetDevice<Keyboard>();
+            Key[] pressedKeys = new Key[] { Key.Space };
+            KeyboardState keyboardState = new KeyboardState(pressedKeys);
+            InputSystem.QueueStateEvent(keyboard, keyboardState);
+        }
         public void ChangeView ()
         {
             OnChangeViewAction.SafeInvoke ();

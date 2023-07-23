@@ -127,7 +127,7 @@ public class OptimizeWorld : MonoBehaviour
 }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             UpdHid();
         }
