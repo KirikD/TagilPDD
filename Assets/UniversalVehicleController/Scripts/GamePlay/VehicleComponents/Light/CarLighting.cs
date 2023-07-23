@@ -7,7 +7,7 @@ namespace PG
     /// <summary>
     /// Car light logic.
     /// </summary>
-    public class CarLighting :MonoBehaviour
+    public class CarLighting : MonoBehaviour
     {
 #pragma warning disable 0649
 
@@ -25,18 +25,18 @@ namespace PG
 
         CarController _Car;
         //Used property, to be able to connect the trailer to the vehicle.
-        public CarController Car 
-        { 
-            get 
-            { 
-                return _Car; 
+        public CarController Car
+        {
+            get
+            {
+                return _Car;
             }
             set
             {
                 if (_Car != null)
                 {
                     Car.OnChangeGearAction -= OnChangeGear;
-                    OnChangeGear (0);
+                    OnChangeGear(0);
                 }
                 _Car = value;
 
@@ -57,40 +57,41 @@ namespace PG
 
         public CarLighting AdditionalLighting { get; set; }
 
-        void Start ()
+        void Start()
         {
-            //Searching and distributing all lights.
+           
+            //Searching and distributing all lights.s
             var lights = GetComponentsInChildren<LightObject>();
             foreach (var l in lights)
             {
                 switch (l.CarLightType)
                 {
                     case CarLightType.Main:
-                    MainLights.Add (l); break;
+                        MainLights.Add(l); break;
                     case CarLightType.TurnLeft:
-                    LeftTurnLights.Add (l);
-                    break;
+                        LeftTurnLights.Add(l);
+                        break;
                     case CarLightType.TurnRight:
-                    RightTurnLights.Add (l);
-                    break;
+                        RightTurnLights.Add(l);
+                        break;
                     case CarLightType.Brake:
-                    BrakeLights.Add (l);
-                    break;
+                        BrakeLights.Add(l);
+                        break;
                     case CarLightType.Reverse:
-                    ReverseLights.Add (l);
-                    break;
+                        ReverseLights.Add(l);
+                        break;
 
                 }
             }
 
-            Car = GetComponent<CarController> ();
+            Car = GetComponent<CarController>();
 
             //Initializing soft light switching.
-            InitSoftSwitches (MainLights);
-            InitSoftSwitches (ReverseLights);
-            InitSoftSwitches (BrakeLights);
-            InitSoftSwitches (LeftTurnLights);
-            InitSoftSwitches (RightTurnLights);
+            InitSoftSwitches(MainLights);
+            InitSoftSwitches(ReverseLights);
+            InitSoftSwitches(BrakeLights);
+            InitSoftSwitches(LeftTurnLights);
+            InitSoftSwitches(RightTurnLights);
         }
 
         private void Update ()

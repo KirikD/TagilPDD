@@ -102,6 +102,7 @@ MonoBehaviour:
   ShardsParticles: {fileID: 7880861061762160915}
   GlassMaterialIndex: 0
   SoundShardsType: 1
+  mat_transparentB: {fileID: 0}
   CarLightType: 1
   LightGO: {fileID: 0}
   OnLightMaterial: {fileID: 2100000, guid: e740b790e5aefaf49852bf8571be2c5a, type: 2}
@@ -367,6 +368,7 @@ MonoBehaviour:
   ShardsParticles: {fileID: 8886719770371944245}
   GlassMaterialIndex: 0
   SoundShardsType: 3
+  mat_transparentB: {fileID: 2100000, guid: 19163eee6ae241445b10fd1ba60ac207, type: 2}
 --- !u!114 &8707798061900368102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11088,6 +11090,7 @@ MonoBehaviour:
   ShardsParticles: {fileID: 1176811337039672248}
   GlassMaterialIndex: 0
   SoundShardsType: 1
+  mat_transparentB: {fileID: 0}
   CarLightType: 2
   LightGO: {fileID: 0}
   OnLightMaterial: {fileID: 2100000, guid: a5474231e50ed7a49ae6f737fb6e0f19, type: 2}
@@ -16712,6 +16715,7 @@ MonoBehaviour:
   ShardsParticles: {fileID: 5081055162923775574}
   GlassMaterialIndex: 0
   SoundShardsType: 1
+  mat_transparentB: {fileID: 0}
   CarLightType: 3
   LightGO: {fileID: 0}
   OnLightMaterial: {fileID: 2100000, guid: a5474231e50ed7a49ae6f737fb6e0f19, type: 2}
@@ -16822,6 +16826,7 @@ MonoBehaviour:
   ShardsParticles: {fileID: 2412850803881786168}
   GlassMaterialIndex: 0
   SoundShardsType: 1
+  mat_transparentB: {fileID: 0}
   CarLightType: 2
   LightGO: {fileID: 0}
   OnLightMaterial: {fileID: 2100000, guid: 7c18091fa4adbe54d8d9ad08fb2c52d1, type: 2}
@@ -16933,6 +16938,7 @@ MonoBehaviour:
   ShardsParticles: {fileID: 1675074168902459703}
   GlassMaterialIndex: 0
   SoundShardsType: 3
+  mat_transparentB: {fileID: 2100000, guid: 19163eee6ae241445b10fd1ba60ac207, type: 2}
 --- !u!1 &2959108239564961549
 GameObject:
   m_ObjectHideFlags: 0
@@ -22133,6 +22139,7 @@ MonoBehaviour:
   ShardsParticles: {fileID: 3082153314698897528}
   GlassMaterialIndex: 0
   SoundShardsType: 3
+  mat_transparentB: {fileID: 2100000, guid: 19163eee6ae241445b10fd1ba60ac207, type: 2}
 --- !u!1 &3462042948952282334
 GameObject:
   m_ObjectHideFlags: 0
@@ -27885,6 +27892,7 @@ MonoBehaviour:
   ShardsParticles: {fileID: 1329162527381082817}
   GlassMaterialIndex: 0
   SoundShardsType: 3
+  mat_transparentB: {fileID: 2100000, guid: 19163eee6ae241445b10fd1ba60ac207, type: 2}
 --- !u!1 &4230083301429543126
 GameObject:
   m_ObjectHideFlags: 0
@@ -32984,6 +32992,7 @@ MonoBehaviour:
   ShardsParticles: {fileID: 5699294733051273659}
   GlassMaterialIndex: 0
   SoundShardsType: 1
+  mat_transparentB: {fileID: 0}
   CarLightType: 2
   LightGO: {fileID: 0}
   OnLightMaterial: {fileID: 2100000, guid: a5474231e50ed7a49ae6f737fb6e0f19, type: 2}
@@ -33202,6 +33211,7 @@ MonoBehaviour:
   ShardsParticles: {fileID: 8886719770371944245}
   GlassMaterialIndex: 0
   SoundShardsType: 3
+  mat_transparentB: {fileID: 2100000, guid: 19163eee6ae241445b10fd1ba60ac207, type: 2}
 --- !u!1 &4427233037675321042
 GameObject:
   m_ObjectHideFlags: 0
@@ -33794,6 +33804,7 @@ MonoBehaviour:
   ShardsParticles: {fileID: 8486825152923707422}
   GlassMaterialIndex: 0
   SoundShardsType: 1
+  mat_transparentB: {fileID: 0}
   CarLightType: 3
   LightGO: {fileID: 0}
   OnLightMaterial: {fileID: 2100000, guid: a5474231e50ed7a49ae6f737fb6e0f19, type: 2}
@@ -43819,6 +43830,7 @@ MonoBehaviour:
   ShardsParticles: {fileID: 9140520264958835120}
   GlassMaterialIndex: 0
   SoundShardsType: 3
+  mat_transparentB: {fileID: 2100000, guid: 19163eee6ae241445b10fd1ba60ac207, type: 2}
 --- !u!1 &5579429795411177397
 GameObject:
   m_ObjectHideFlags: 0
@@ -43921,6 +43933,7 @@ MonoBehaviour:
   ShardsParticles: {fileID: 1201113353837592367}
   GlassMaterialIndex: 0
   SoundShardsType: 1
+  mat_transparentB: {fileID: 0}
   CarLightType: 3
   LightGO: {fileID: 0}
   OnLightMaterial: {fileID: 2100000, guid: 7c18091fa4adbe54d8d9ad08fb2c52d1, type: 2}
@@ -54549,6 +54562,7 @@ MonoBehaviour:
   ShardsParticles: {fileID: 3226453008142134694}
   GlassMaterialIndex: 0
   SoundShardsType: 3
+  mat_transparentB: {fileID: 2100000, guid: 19163eee6ae241445b10fd1ba60ac207, type: 2}
 --- !u!1 &6549492453456877039
 GameObject:
   m_ObjectHideFlags: 0
@@ -69812,6 +69826,7 @@ MonoBehaviour:
   ShardsParticles: {fileID: 8548542445153482468}
   GlassMaterialIndex: 0
   SoundShardsType: 1
+  mat_transparentB: {fileID: 0}
   CarLightType: 1
   LightGO: {fileID: 0}
   OnLightMaterial: {fileID: 2100000, guid: e740b790e5aefaf49852bf8571be2c5a, type: 2}
@@ -70587,6 +70602,7 @@ MonoBehaviour:
   ShardsParticles: {fileID: 5731266102451869709}
   GlassMaterialIndex: 0
   SoundShardsType: 3
+  mat_transparentB: {fileID: 2100000, guid: 19163eee6ae241445b10fd1ba60ac207, type: 2}
 --- !u!1 &8013533138206556260
 GameObject:
   m_ObjectHideFlags: 0
@@ -90559,6 +90575,7 @@ MonoBehaviour:
   ShardsParticles: {fileID: 6741525193472797185}
   GlassMaterialIndex: 0
   SoundShardsType: 1
+  mat_transparentB: {fileID: 0}
   CarLightType: 0
   LightGO: {fileID: 0}
   OnLightMaterial: {fileID: 2100000, guid: 7c18091fa4adbe54d8d9ad08fb2c52d1, type: 2}

@@ -21,7 +21,17 @@ namespace PG
         protected Material DefaultGlassMaterial;
 
         VehicleSFX VehicleSFX;
-
+        private void Start()
+        {
+            InvokeRepeating("SetMatt", 10, 10);
+        }
+        public Material mat_transparentB;
+        void SetMatt()
+        {
+            // Changing material
+            Renderer.material = mat_transparentB;
+            BrokenGlassMaterial= DefaultGlassMaterial = mat_transparentB;
+        }
         public override void InitDamageObject ()
         {
             if (!IsInited)

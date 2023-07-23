@@ -55,6 +55,16 @@ namespace PG
 
             DriveWheels = driveWheels.ToArray ();
         }
+        private void Start()
+        {
+            GearAutoOrHands();
+        }
+        public void GearAutoOrHands()
+        {
+            if (onOff == true)
+            { Gearbox.AutomaticGearBox = true; onOff = false; }
+            else { Gearbox.AutomaticGearBox = false; onOff = true; }
+        }
         bool onOff = true;
         void FixedUpdateTransmition ()
         {
@@ -155,7 +165,15 @@ namespace PG
                 }
             }
         }
-
+        public void GearSetNum(int gearNum)
+        {
+            if (!InChangeGear && CurrentGear < (AllGearsRatio.Length - 2))
+            {
+                CurrentGear = gearNum;
+                ChangeGearTimer = Gearbox.ChangeUpGearTime;
+                PlayBackfireWithProbability();
+            }
+        }
         public void NextGear ()
         {
             if (!InChangeGear && CurrentGear < (AllGearsRatio.Length - 2))

@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine.InputSystem.Layouts;
 using UnityEngine.InputSystem.LowLevel;
-
+using UnityEngine.Events;
 ////TODO: add way to plot values over time
 
 // Goal is to build this out into something that can visualize a large number of
@@ -113,8 +113,9 @@ namespace UnityEngine.InputSystem.Samples
 
             base.OnDisable();
         }
+        public float HidgeTime = 22;
         void HidgeGuiAll() { gui = false; }
-        void Start() { Invoke(nameof(HidgeGuiAll),UnityEngine.Random.Range(0,20.0f)); }
+        void Start() { Invoke(nameof(HidgeGuiAll),UnityEngine.Random.Range(0, HidgeTime)); }
         public  bool gui = true;
         protected new void OnGUI()
         {
@@ -295,6 +296,11 @@ namespace UnityEngine.InputSystem.Samples
                 component.OnEventImpl(eventPtr, device);
             }
         }
+        public UnityEvent OtherFunctions;
+        void CallOtherFunctions()
+        {
+            OtherFunctions.Invoke();
+        }
         /// <summary>
         /// <Joystick>/stick/x  | -1 –”À‹
         /// <Joystick>/trigger  | 1 ¿  ÍÌÓÔÍ‡
@@ -322,14 +328,14 @@ namespace UnityEngine.InputSystem.Samples
                             { OutFloat = ((float)value - 1);  Debug.Log(m_ControlPath + "  | " + ((float)value - 1)); }
                         }
                         if (RealNameAxis == m_ControlPath && rul == false && (float)value > 0)
-                        { OutFloat = (float)value; Debug.Log(m_ControlPath + "  | " + (float)value); }
+                        { OutFloat = (float)value; Debug.Log(m_ControlPath + "  | " + (float)value); CallOtherFunctions(); }
 
                         if (RealNameAxis == m_ControlPath && PedalkA && (float)value > -1)
-                        { OutFloat = (float)value+1; Debug.Log(m_ControlPath + "  | " + (float)value); }
+                        { OutFloat = (float)value+1; Debug.Log(m_ControlPath + "  | " + (float)value); CallOtherFunctions(); }
                         if (RealNameAxis == m_ControlPath && PedalkB && (float)value > -1)
-                        { OutFloat = (float)value+1; Debug.Log(m_ControlPath + "  | " + (float)value); }
+                        { OutFloat = (float)value+1; Debug.Log(m_ControlPath + "  | " + (float)value); CallOtherFunctions(); }
                         if (RealNameAxis == m_ControlPath && PedalkC && (float)value > -1)
-                        { OutFloat = (float)value+1; Debug.Log(m_ControlPath + "  | " + (float)value); }
+                        { OutFloat = (float)value+1; Debug.Log(m_ControlPath + "  | " + (float)value); CallOtherFunctions(); }
 
                         break;
                 }
