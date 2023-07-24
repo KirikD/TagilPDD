@@ -516,6 +516,7 @@ namespace PG
         }
         public void PressBttKeyFara()
         {
+            Debug.Log("Fara");
             Keyboard keyboard = InputSystem.GetDevice<Keyboard>();
             Key[] pressedKeys = new Key[] { Key.M };
             KeyboardState keyboardState = new KeyboardState(pressedKeys);

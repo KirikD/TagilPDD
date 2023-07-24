@@ -7,7 +7,7 @@ namespace PG
 {
     //This part of the component contains the gear shift logic (automatic and manual), 
     //and the logic for transferring torque from the engine to the drive wheels.
-    public partial class CarController :VehicleController
+    public partial class CarController : VehicleController
     {
         public GearboxConfig Gearbox;
         public event System.Action<int> OnChangeGearAction;
@@ -22,7 +22,7 @@ namespace PG
                 if (_CurrentGear != value)
                 {
                     _CurrentGear = value;
-                    OnChangeGearAction.SafeInvoke (_CurrentGear);
+                    OnChangeGearAction.SafeInvoke(_CurrentGear);
                 }
             }
         }
@@ -34,7 +34,7 @@ namespace PG
         float[] AllGearsRatio;
         Wheel[] DriveWheels;
 
-        void AwakeTransmition ()
+        void AwakeTransmition()
         {
             //Calculated gears ratio with main ratio
             AllGearsRatio = new float[Gearbox.GearsRatio.Length + 2];
@@ -45,21 +45,26 @@ namespace PG
                 AllGearsRatio[i + 2] = Gearbox.GearsRatio[i] * Gearbox.MainRatio;
             }
 
-            var driveWheels = new  List<Wheel>();
+            var driveWheels = new List<Wheel>();
             foreach (var wheel in Wheels)
             {
                 if (wheel.DriveWheel)
                 {
-                    driveWheels.Add (wheel);
+                    driveWheels.Add(wheel);
                 }
             }
 
-            DriveWheels = driveWheels.ToArray ();
+            DriveWheels = driveWheels.ToArray();
         }
         private void Start()
         {
             GearAutoOrHands();
+            
+              //  InvokeRepeating("GearNulling",1, 1);
         }
+        bool SetFromRul = false;
+        void GearNulling()
+        { if (SetFromRul) GearSetNum(0); SetFromRul = false; }
         public void GearAutoOrHands()
         {
             if (onOff == true)
@@ -171,13 +176,22 @@ namespace PG
        
         public void GearSetNum(int gearNum)
         {
+            SetFromRul = true;
+            CancelInvoke("GearNulling"); CancelInvoke("GearNulling");
+
+            Invoke("GearNulling", 1);
+            
+            
             if (!InChangeGear && CurrentGear < (AllGearsRatio.Length - 2))
             {
+              
                 CurrentGear = gearNum;
                 ChangeGearTimer = Gearbox.ChangeUpGearTime;
                 PlayBackfireWithProbability();
             }
         }
+
+
         public void NextGear ()
         {
             if (!InChangeGear && CurrentGear < (AllGearsRatio.Length - 2))
