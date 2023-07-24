@@ -23,7 +23,7 @@ public class MoveStrelki : MonoBehaviour
            
             if (onOff == true)
             { InvokeRepeating("StartStrelki", 2.0f, 5.0f); matGlass.SetFloat("_RefractStrength", 0.0f);  onOff = false; }
-            else { CancelInvoke("StartStrelki"); matGlass.SetFloat("_RefractStrength", 0.5f);  onOff = true; }
+            else { CancelInvoke("StartStrelki"); matGlass.SetFloat("_RefractStrength", 0.2f);  onOff = true; }
         }        
         if (Input.GetKeyDown(KeyCode.M))
         {
@@ -34,7 +34,7 @@ public class MoveStrelki : MonoBehaviour
     }
     public void SetKapliNaStekle()
     {
-        matGlass.SetFloat("_RefractStrength", 0.5f);
+        matGlass.SetFloat("_RefractStrength", 0.4f);
     }
     public void FaraOnOff()
     {
