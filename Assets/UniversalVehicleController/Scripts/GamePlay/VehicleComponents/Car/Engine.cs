@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.LowLevel;
+using UnityEngine.InputSystem.Samples;
 
 namespace PG
 {
@@ -26,9 +29,13 @@ namespace PG
                     (1 + CurrentTurbo * Engine.TurboAdditionalTorque) *
                     (InBoost ? 1 + Engine.BoostAdditionalPower : 1) *
                     (Steer.TCS > 0 ? TCSMultiplayer : 1) *
-                    (Engine.SpeedLimit > 0? Mathf.InverseLerp(Engine.SpeedLimit, Engine.SpeedLimit * 0.5f, CurrentSpeed) : 1)
-                    ;
-            } 
+                    (Engine.SpeedLimit > 0? Mathf.InverseLerp(Engine.SpeedLimit, Engine.SpeedLimit * 0.5f, CurrentSpeed) : 1);
+
+            }
+            set
+            {
+                CurrentMotorTorque = value;
+            }
         }
 
         public bool EngineIsOn { get; private set; }
@@ -139,6 +146,7 @@ namespace PG
                     EngineRPM = Engine.TargetCutOffRPM;
                     InCutOff = false;
                 }
+
             }
 
             //Calculation of the average rpm of all driving wheels.
@@ -183,6 +191,15 @@ namespace PG
                 EngineLoad = (TargetRPM - EngineRPM).Clamp (-300, 300) / 300 * CurrentAcceleration;
 
                 EngineRPM = Mathf.Lerp (EngineRPM, TargetRPM, changeRPMSpeed * Time.fixedDeltaTime);
+                //Debug.Log(TargetRPM +" dfgdg " + EngineRPM);
+                if (ICV_Gaz.OutFloat > 0)
+                {
+                    Keyboard keyboard = InputSystem.GetDevice<Keyboard>();
+                    Key[] pressedKeys = new Key[] { Key.UpArrow };
+                    KeyboardState keyboardState = new KeyboardState(pressedKeys);
+                    InputSystem.QueueStateEvent(keyboard, keyboardState);
+
+                    EngineRPM = ICV_Gaz.OutFloat * 2700; }
             }
 
             //Check CutOff.
@@ -192,7 +209,7 @@ namespace PG
                 InCutOff = true;
                 CutOffTimer = Engine.CutOffTime;
             }
-
+            //
 
             //Turbo logic. The speed and power of the turbo depends on the EnigneRPM and the Acceleration value.
             if (Engine.EnableTurbo)
@@ -213,7 +230,7 @@ namespace PG
                 BoostAmount = Mathf.Max (0, BoostAmount - Time.deltaTime);
             }
         }
-
+        public InputControlVisualizer ICV_Gaz;
         public void StartEngine ()
         {
             if (StartEngineCoroutine == null)

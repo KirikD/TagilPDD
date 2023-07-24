@@ -131,6 +131,7 @@ namespace PG
         /// </summary>
         public void FixedUpdate ()
         {
+           
             float targetTemperature = 0;
 
             WheelCollider.GetWorldPose (out Position, out Rotation);
@@ -287,7 +288,7 @@ namespace PG
         public void SetSteerAngle (float steerAngle)
         {
             if (IsSteeringWheel)
-            {
+            {           
                 WheelCollider.steerAngle = steerAngle * SteerPercent;
             }
         }

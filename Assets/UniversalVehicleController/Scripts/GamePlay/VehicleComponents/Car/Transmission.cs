@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.Samples;
 
 namespace PG
 {
@@ -75,16 +76,17 @@ namespace PG
                 { Gearbox.AutomaticGearBox = true; onOff = false; }
                 else { Gearbox.AutomaticGearBox = false; onOff = true; }
             }
-
+           
             if (!Mathf.Approximately (CurrentAcceleration, 0) && (Gearbox.HasRGear || CurrentGear >= 0))
             {
+              
                 var motorTorque = CurrentAcceleration * (CurrentMotorTorque * (MaxMotorTorque * AllGearsRatio[CurrentGearIndex]));
 
                 if (InChangeGear)
                 {
                     motorTorque = 0;
                 }
-
+                
                 //Calculation of target rpm for driving wheels.
                 var targetWheelsRPM = AllGearsRatio[CurrentGearIndex] == 0? 0: EngineRPM / AllGearsRatio[CurrentGearIndex];
                 var offset = (400 / AllGearsRatio[CurrentGearIndex]).Abs();
@@ -109,6 +111,7 @@ namespace PG
 
                     //Apply of torque to the wheel.
                     wheel.SetMotorTorque (wheelTorque);
+                   // Debug.Log(CurrentAcceleration +" fgbnretghert " + CurrentMotorTorque);
                 }
             }
             else
@@ -165,6 +168,7 @@ namespace PG
                 }
             }
         }
+       
         public void GearSetNum(int gearNum)
         {
             if (!InChangeGear && CurrentGear < (AllGearsRatio.Length - 2))

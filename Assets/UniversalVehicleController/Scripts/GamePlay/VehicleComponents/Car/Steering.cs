@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.InputSystem.XInput;
+using UnityEngine.InputSystem.Samples;
 
 namespace PG
 {
@@ -94,9 +96,12 @@ namespace PG
             for (int i = 0; i < SteeringWheels.Length; i++)
             {
                 SteeringWheels[i].SetSteerAngle (CurrentSteerAngle);
+                if (ICV_rul.OutFloat != 0)
+                { SteeringWheels[i].SetSteerAngle(ICV_rul.OutFloat*45); }
             }
-        }
 
+        }
+        public InputControlVisualizer ICV_rul;
         /// <summary>
         /// A method to help resistance drift and rotate the car with the handbrake.
         /// </summary>
@@ -161,6 +166,7 @@ namespace PG
                 for (int i = 0; i < Wheels.Length; i++)
                 {
                     Wheels[i].SetBrakeTorque (Wheels[i].DriveWheel ? 0 : CurrentBrake);
+                   
                 }
             }
             //Just braking.
@@ -180,6 +186,7 @@ namespace PG
                         else
                         {
                             Wheels[i].SetBrakeTorque (CurrentBrake);
+                           
                         }
                     }
                 }
@@ -188,12 +195,13 @@ namespace PG
                     //Without ABS Logic.
                     for (int i = 0; i < Wheels.Length; i++)
                     {
-                        Wheels[i].SetBrakeTorque (CurrentBrake);
+                        //Wheels[i].SetBrakeTorque (0);
+                        Wheels[i].SetBrakeTorque(ICV_Tormoz.OutFloat*0.2f);
                     }
                 }
             }
         }
-
+         public InputControlVisualizer ICV_Tormoz;
         [System.Serializable]
         public class SteerConfig
         {
