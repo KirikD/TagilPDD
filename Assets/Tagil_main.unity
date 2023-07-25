@@ -29127,11 +29127,11 @@ MonoBehaviour:
   LST: 640.77576
   lastHourUpdate: 12
   hourTime: 0
-  cloudAnim: {x: -0.8413463, y: -0.8266008, z: -0.16660881}
-  cloudFlatBaseAnim: {x: 0.10612522, y: -0.9883032}
-  cloudFlatDetailAnim: {x: 0.0010612541, y: 0.33159673}
-  cloudAnimNonScaled: {x: 0.10612522, y: -104.965775}
-  cirrusAnim: {x: 0.04616446, y: -0.8015037}
+  cloudAnim: {x: -0.8413463, y: -0.6526748, z: -0.9313737}
+  cloudFlatBaseAnim: {x: 0.10612522, y: 0.42843536}
+  cloudFlatDetailAnim: {x: 0.0010612541, y: -0.0017610674}
+  cloudAnimNonScaled: {x: 0.10612522, y: -105.54878}
+  cirrusAnim: {x: 0.04616446, y: 0.9496948}
   windIntensity: 0.27499998
   shadowIntensityMod: 0
   interiorMode: 0
