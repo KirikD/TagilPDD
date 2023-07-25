@@ -21,7 +21,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Shader Graphs_Ice
-  m_Shader: {fileID: 0}
+  m_Shader: {fileID: -6465566751694194690, guid: e3a8fa9d11c91be4a89659aed2714cb1,
+    type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -54,10 +55,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _FresnelStrength: 0
+    - _FresnelStrength: 0.5
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _RefractStrength: 0.32
+    - _RefractStrength: 0
     m_Colors:
     - _IceColor: {r: 1, g: 1, b: 1, a: 1}
     - _IceTiling: {r: 4, g: 4, b: 0, a: 0}

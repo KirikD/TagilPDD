@@ -196,7 +196,7 @@ namespace PG
                     for (int i = 0; i < Wheels.Length; i++)
                     {
                         //Wheels[i].SetBrakeTorque (0);
-                        Wheels[i].SetBrakeTorque(ICV_Tormoz.OutFloat*0.2f);
+                        Wheels[i].SetBrakeTorque(ICV_Tormoz.OutFloat*0.1f);
                     }
                 }
             }

@@ -55,10 +55,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _FresnelStrength: 0.1
+    - _FresnelStrength: 0.5
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _RefractStrength: 0.32
+    - _RefractStrength: 0
     m_Colors:
     - _IceColor: {r: 1, g: 1, b: 1, a: 1}
     - _IceTiling: {r: 4, g: 4, b: 0, a: 0}

@@ -320,7 +320,7 @@ namespace UnityEngine.InputSystem.Samples
                         return; // No value for control in event.
                     var value = m_Control.ReadValueFromStateAsObject(statePtr); OutFloat = 0; //Debug.Log(value+ "Deb" + m_ControlPath);
                         m_Visualizer.AddSample(value, eventPtr.time);
-                        if (RealNameAxis == m_ControlPath && rul && (float)value < 1 && (float)value > -1)
+                        if (RealNameAxis == m_ControlPath && rul && (float)value < 2 && (float)value > -2)
                         {
                             if ((float)value < 0)
                             { OutFloat = ((float)value + 1); Debug.Log(m_ControlPath + "  | " + ((float)value + 1)); }
