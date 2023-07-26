@@ -11341,6 +11341,7 @@ MonoBehaviour:
     RPMToNextGear: 6500
     RPMToPrevGearDiff: 500
   EngineDamageableObject: {fileID: 0}
+  ICV_Gaz: {fileID: 0}
   Steer:
     MaxSteerAngle: 45
     EnableSteerLimit: 1
@@ -11489,6 +11490,8 @@ MonoBehaviour:
     DriftLimitAngle: 0
     ABS: 0
     TCS: 0
+  ICV_rul: {fileID: 0}
+  ICV_Tormoz: {fileID: 0}
   Gearbox:
     ChangeUpGearTime: 0.2
     ChangeDownGearTime: 0.1
@@ -69604,7 +69607,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4976dc335aa26bb42b189effffa9b6be, type: 2}
+  - {fileID: -5009622781434099426, guid: e603c9181e226de4899ff229c1c103a2, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -70477,7 +70480,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -3569703881712801193, guid: 9f0e99be858781c4ca96fd9d29cb7e6f, type: 3}
+  - {fileID: 2100000, guid: 9982588640a976c4e8c238d42d8ea525, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
