@@ -194,12 +194,13 @@ namespace PG
                 //Debug.Log(TargetRPM +" dfgdg " + EngineRPM);
                 if (ICV_Gaz.OutFloat > 0)
                 {
-                    Keyboard keyboard = InputSystem.GetDevice<Keyboard>();
+                   /* Keyboard keyboard = InputSystem.GetDevice<Keyboard>();
                     Key[] pressedKeys = new Key[] { Key.UpArrow };
                     KeyboardState keyboardState = new KeyboardState(pressedKeys);
-                    InputSystem.QueueStateEvent(keyboard, keyboardState);
+                    InputSystem.QueueStateEvent(keyboard, keyboardState);*/
 
-                    EngineRPM = ICV_Gaz.OutFloat * 2700; }
+                    EngineRPM = ICV_Gaz.OutFloat * 2700;
+                }
             }
 
             //Check CutOff.

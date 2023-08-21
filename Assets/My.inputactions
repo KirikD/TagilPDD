@@ -1,0 +1,254 @@
+{
+    "name": "My",
+    "maps": [
+        {
+            "name": "GraphicsSett",
+            "id": "8055f9de-0e2c-4bd9-be30-d25b2a120f66",
+            "actions": [
+                {
+                    "name": "Graphics1",
+                    "type": "Button",
+                    "id": "7f445580-30bb-45ef-970c-1c3d840e8d8b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Graphics2",
+                    "type": "Button",
+                    "id": "10946f04-8705-41b3-aa1e-0fb3e49ae83e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Graphics3",
+                    "type": "Button",
+                    "id": "8c3497c2-ee6d-46d9-aa6e-6c284b669b46",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Graphics4",
+                    "type": "Button",
+                    "id": "f63cb37e-51e3-40ab-b9fb-ab727bfa5f8a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Graphics5",
+                    "type": "Button",
+                    "id": "ec888506-ab5a-465d-acb9-963e86544eff",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Graphics6",
+                    "type": "Button",
+                    "id": "8b5bea76-cd36-464a-baa2-5188b398e8de",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Beep",
+                    "type": "Button",
+                    "id": "7dcf3321-47a5-4676-a03a-443e8a9ad059",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "HandB",
+                    "type": "Button",
+                    "id": "c9453fa3-d041-4065-a3f0-e983f8f41bdb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SpaceBtt",
+                    "type": "Button",
+                    "id": "80535749-6bf8-4e3c-bb17-47b9b84e9fb9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Tormoz",
+                    "type": "Button",
+                    "id": "e3ca8439-5fc3-4a49-a3b3-e1006f551378",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "B_Key",
+                    "type": "Button",
+                    "id": "ae2e74ff-453f-45f9-802d-ea5f47dc20f9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Automat",
+                    "type": "Button",
+                    "id": "fc306b46-8b72-4955-a244-ae4ee774dea9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "a1a93f5a-dc84-4808-9eed-72726ffab9c3",
+                    "path": "<Keyboard>/numpad1",
+                    "interactions": "Press(behavior=2)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Graphics1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1c2b19eb-afe9-42c7-9a78-5d80535bcdd6",
+                    "path": "<Keyboard>/numpad2",
+                    "interactions": "Press(behavior=2)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Graphics2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "102a53fa-d9ac-4b78-bdfc-243693cd5efd",
+                    "path": "<Keyboard>/numpad3",
+                    "interactions": "Press(behavior=2)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Graphics3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f0308d72-1afc-4939-a445-76283eb6fac3",
+                    "path": "<Keyboard>/numpad4",
+                    "interactions": "Press(behavior=2)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Graphics4",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3362c575-6360-41ca-b48e-b2d3d783973d",
+                    "path": "<Keyboard>/numpad5",
+                    "interactions": "Press(behavior=2)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Graphics5",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c09c8040-6c9f-41c5-9e8b-af1bf60e5135",
+                    "path": "<Keyboard>/numpad6",
+                    "interactions": "Press(behavior=2)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Graphics6",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0257679b-bfa4-46a1-b5e0-9841cbda16a5",
+                    "path": "<Keyboard>/p",
+                    "interactions": "Press(behavior=2)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Beep",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4be0d054-8704-4c1c-9afb-6025cf5e75bf",
+                    "path": "<Keyboard>/u",
+                    "interactions": "Press(behavior=2)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HandB",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a1786a05-7fe9-4fb2-93db-862b867b342d",
+                    "path": "<Keyboard>/space",
+                    "interactions": "Press(behavior=2)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SpaceBtt",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "45ff3f5c-158e-405f-9f02-57be7d5fcced",
+                    "path": "<Keyboard>/j",
+                    "interactions": "Press(behavior=2)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Tormoz",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6a66570c-c4b8-4f67-8d7c-11d28281c747",
+                    "path": "<Keyboard>/b",
+                    "interactions": "Press(behavior=2)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "B_Key",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ea5c0023-01f9-4615-9245-501b5232bb3f",
+                    "path": "<Keyboard>/b",
+                    "interactions": "Press(behavior=2)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Automat",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

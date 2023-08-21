@@ -59,7 +59,6 @@ namespace PG
                     Camera = Instantiate (B.ResourcesSettings.UVCMainCamera);
                     Camera.tag = mainCameraTag;
                 }
-
                 Camera.transform.SetParent (CameraParent);
                 Camera.transform.localPosition = Vector3.zero;
                 Camera.transform.localRotation = Quaternion.identity;
@@ -95,7 +94,6 @@ namespace PG
 
             //Rotate character and camera
             Vector2 viewDelta = Input.ViewInput;
-
             transform.rotation *= Quaternion.AngleAxis(viewDelta.x, Vector3.up);
 
             //Rotate the Camera by Vertical axis

@@ -125,16 +125,29 @@ public class OptimizeWorld : MonoBehaviour
 
         } 
 }
+    public My m_Controls;
+    public void Awake()
+    {
+        m_Controls = new My();
+    }
+    public void OnEnable()
+    {
+        m_Controls.Enable();
+    }
+
+    public void OnDisable()
+    {
+        m_Controls.Disable();
+    }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        float Beepinp = m_Controls.GraphicsSett.Beep.ReadValue<float>();
+  
+        if (Beepinp > 0.5f)
         {
+            Beep.volume = 1.0F;
             UpdHid();
         }
         Beep.volume = 0.0F;
-        if (Input.GetKey(KeyCode.P))
-        {
-            Beep.volume = 1.0F;
-        }
     }
 }

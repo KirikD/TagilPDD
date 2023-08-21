@@ -64,6 +64,10 @@ public class EnviroSkyRendering : MonoBehaviour
     #endregion
     ////////////////////////
     #region Fog Var
+    public void rottCam(float rott) 
+    {
+        transform.rotation *= Quaternion.AngleAxis(rott, Vector3.up);
+    }
     public enum FogType
     {
         Disabled,

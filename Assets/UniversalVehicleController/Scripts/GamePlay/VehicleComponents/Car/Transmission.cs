@@ -72,10 +72,23 @@ namespace PG
             else { Gearbox.AutomaticGearBox = false; onOff = true; }
         }
         bool onOff = true;
+        public My m_Controls;
+
+        public void OnEnable()
+        {
+            m_Controls = new My();
+            m_Controls.Enable();
+        }
+
+        public void OnDisable()
+        {
+            m_Controls.Disable();
+        }
+
         void FixedUpdateTransmition ()
         {
-            
-            if (Input.GetKeyDown(KeyCode.B))
+            float Automat = m_Controls.GraphicsSett.HandB.ReadValue<float>();
+            if (Automat > 0.5f)
             {
                 if (onOff == true)
                 { Gearbox.AutomaticGearBox = true; onOff = false; }
@@ -115,8 +128,11 @@ namespace PG
                     }
 
                     //Apply of torque to the wheel.
-                    wheel.SetMotorTorque (wheelTorque);
-                   // Debug.Log(CurrentAcceleration +" fgbnretghert " + CurrentMotorTorque);
+                    if (ICV_GazTrans.OutFloat < 0.01f)
+                        wheel.SetMotorTorque (wheelTorque);// старое
+                   
+                
+                  //  Debug.Log(wheelTorque + " fgbnretghert " + CurrentGear);  // 0 2700 -  0 1
                 }
             }
             else
@@ -126,7 +142,27 @@ namespace PG
                     DriveWheels[i].SetMotorTorque (0);
                 }
             }
-
+            for (int i = 0; i < DriveWheels.Length; i++)
+            {
+                if (Gearbox.AutomaticGearBox)
+                {
+                    var wheel = DriveWheels[i];
+                    if (ICV_revers_gear.OutFloat > 0.5f && ICV_GazTrans.OutFloat > 0)
+                        wheel.SetMotorTorque(ICV_GazTrans.OutFloat * -1900);
+                    else
+                        if (ICV_GazTrans.OutFloat > 0)
+                        wheel.SetMotorTorque(ICV_GazTrans.OutFloat * 2500);
+                }
+                else
+                {
+                    var wheel = DriveWheels[i];
+                    if (ICV_revers_gear.OutFloat > 0.5f && ICV_GazTrans.OutFloat > 0)
+                        wheel.SetMotorTorque(ICV_GazTrans.OutFloat * -2000);
+                    else
+                        if (ICV_GazTrans.OutFloat > 0)
+                        wheel.SetMotorTorque(ICV_GazTrans.OutFloat * 700 * CurrentGear);
+                }
+            }
             if (InChangeGear)
             {
                 ChangeGearTimer -= Time.fixedDeltaTime;
@@ -173,7 +209,8 @@ namespace PG
                 }
             }
         }
-       
+        public InputControlVisualizer ICV_GazTrans;
+        public InputControlVisualizer ICV_revers_gear;
         public void GearSetNum(int gearNum)
         {
             SetFromRul = true;

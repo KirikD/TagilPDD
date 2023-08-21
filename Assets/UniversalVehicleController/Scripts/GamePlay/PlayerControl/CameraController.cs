@@ -213,7 +213,10 @@ namespace PG
             CarSpeedDelta = Mathf.Lerp (CarSpeedDelta, currentSpeed - PrevCarSpeed, ActivePreset.GForceLerp);
             PrevCarSpeed = currentSpeed;
         }
-
+        public void RotateAroundHead(float rott)
+        {
+            HorizontalRotation.localRotation *= Quaternion.AngleAxis(rott, Vector3.up);
+        }
         private void LateUpdate ()
         {
             if (ActivePreset.EnableRotation)

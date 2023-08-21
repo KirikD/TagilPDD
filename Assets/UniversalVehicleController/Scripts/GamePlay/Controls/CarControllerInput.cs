@@ -8,7 +8,8 @@ using UnityEngine.EventSystems;
 using UnityEngine.InputSystem.Controls;
 using System;
 using UnityEngine.InputSystem.LowLevel;
-
+using UnityEngine.InputSystem.Samples;
+using System.Windows.Input;
 namespace PG
 {
     /// <summary>
@@ -47,10 +48,38 @@ namespace PG
         public static int GamepadP1no;
         public static int GamepadP2no;
         bool onOff = true;
+       //   void Awake()
+       // { HandBrake = true; }
+
+        public void ParkingFunc()
+        {
+            
+                if (onOff == true)
+                { HandBrake = true; onOff = false; }
+                else { HandBrake = false; onOff = true; }
+            
+        }
+
+        public My m_Controls;
+        public void Awake()
+        {
+            m_Controls = new My();
+        }
+        public void OnEnable()
+        {
+            m_Controls.Enable();
+        }
+
+        public void OnDisable()
+        {
+            m_Controls.Disable();
+        }
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Space)) onOff = true;
-            if (Input.GetKeyDown(KeyCode.J))
+            float SpaceBtt = m_Controls.GraphicsSett.SpaceBtt.ReadValue<float>();
+            float Tormozz = m_Controls.GraphicsSett.Tormoz.ReadValue<float>();
+            if (SpaceBtt > 0.5f) onOff = true;
+            if (Tormozz > 0.5f)
             { if (onOff == true)
                 { HandBrake = true; onOff = false; } else { HandBrake = false; onOff = true; } }
 
@@ -514,8 +543,10 @@ namespace PG
           KeyboardState keyboardState = new KeyboardState(pressedKeys);
           InputSystem.QueueStateEvent(keyboard, keyboardState);
         }
+        public MoveStrelki moveStrelkiClass;
         public void PressBttKeyFara()
         {
+            moveStrelkiClass.InputGetKeyDownKeyCodeM();
             Debug.Log("Fara");
             Keyboard keyboard = InputSystem.GetDevice<Keyboard>();
             Key[] pressedKeys = new Key[] { Key.M };
@@ -531,6 +562,7 @@ namespace PG
         }
         public void PressBttKeyStrelki()
         {
+            moveStrelkiClass.InputGetKeyDownKeyCodeK();
             Keyboard keyboard = InputSystem.GetDevice<Keyboard>();
             Key[] pressedKeys = new Key[] { Key.K };
             KeyboardState keyboardState = new KeyboardState(pressedKeys);
@@ -545,6 +577,7 @@ namespace PG
         }
         public void PressBttKeyPovLeft()
         {
+            moveStrelkiClass.InputGetKeyDownKeyCodeQ();
             Keyboard keyboard = InputSystem.GetDevice<Keyboard>();
             Key[] pressedKeys = new Key[] { Key.Q };
             KeyboardState keyboardState = new KeyboardState(pressedKeys);
@@ -552,6 +585,7 @@ namespace PG
         }
         public void PressBttKeyPovRight()
         {
+            moveStrelkiClass.InputGetKeyDownKeyCodeE();
             Keyboard keyboard = InputSystem.GetDevice<Keyboard>();
             Key[] pressedKeys = new Key[] { Key.E };
             KeyboardState keyboardState = new KeyboardState(pressedKeys);
@@ -570,6 +604,14 @@ namespace PG
             Key[] pressedKeys = new Key[] { Key.Space };
             KeyboardState keyboardState = new KeyboardState(pressedKeys);
             InputSystem.QueueStateEvent(keyboard, keyboardState);
+        }
+        public void Avariika()//
+        {
+            moveStrelkiClass.InputGetKeyDownKeyCodeX();
+            Keyboard keyboard = InputSystem.GetDevice<Keyboard>();
+                Key[] pressedKeys = new Key[] { Key.X };
+                KeyboardState keyboardState = new KeyboardState(pressedKeys);
+                InputSystem.QueueStateEvent(keyboard, keyboardState);
         }
         public void ChangeView ()
         {

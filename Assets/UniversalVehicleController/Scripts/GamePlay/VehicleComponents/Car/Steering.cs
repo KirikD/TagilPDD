@@ -185,8 +185,8 @@ namespace PG
                         }
                         else
                         {
-                            Wheels[i].SetBrakeTorque (CurrentBrake);
-                           
+                           // Wheels[i].SetBrakeTorque (CurrentBrake);
+                            Wheels[i].SetBrakeTorque(ICV_Tormoz.OutFloat * 0.19f);
                         }
                     }
                 }
@@ -196,7 +196,7 @@ namespace PG
                     for (int i = 0; i < Wheels.Length; i++)
                     {
                         //Wheels[i].SetBrakeTorque (0);
-                        Wheels[i].SetBrakeTorque(ICV_Tormoz.OutFloat*0.1f);
+                        Wheels[i].SetBrakeTorque(ICV_Tormoz.OutFloat*0.19f);
                     }
                 }
             }
