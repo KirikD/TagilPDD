@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Tagil_main.unity
-    guid: bcdfcdcd15be22444a22127bc8c640d8
+    path: Assets/Tagil_mainold.unity
+    guid: b4375bd5b0d99ae4499c6f1b9ae39c96
   - enabled: 1
     path: Assets/Tagil_Ways.unity
     guid: 5a151f127fb1be34ab256451477a81d9
