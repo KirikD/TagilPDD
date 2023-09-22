@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7171488049700155627}
   - component: {fileID: 3830935781328544262}
   - component: {fileID: 331575895411335865}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: plate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -7045408579857795489, guid: 60364c816c136f5479bf1e6006253da2, type: 3}
+  - {fileID: -5009622781434099426, guid: e603c9181e226de4899ff229c1c103a2, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 7460432264676328683}
   - component: {fileID: 8082072395159976530}
   - component: {fileID: 8314363559881127848}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Chassis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5524823453397483950, guid: 60364c816c136f5479bf1e6006253da2, type: 3}
+  - {fileID: 2100000, guid: 13b848dafe1b35d48b4cd05e79a86c15, type: 2}
   - {fileID: -6025262093582170927, guid: 60364c816c136f5479bf1e6006253da2, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -194,7 +194,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 295861714655235764}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.73802614, y: 0.735, z: 0.94997513}
+  m_LocalPosition: {x: 0.73802614, y: 0.17499995, z: 0.94997513}
   m_LocalScale: {x: 1.43019, y: 1.4301898, z: 1.4301898}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -210,14 +210,14 @@ WheelCollider:
   m_GameObject: {fileID: 295861714655235764}
   serializedVersion: 2
   m_Center: {x: 0, y: 0, z: 0}
-  m_Radius: 0.28
+  m_Radius: 0.285
   m_SuspensionSpring:
     spring: 50000
     damper: 2000
     targetPosition: 0.2
   m_SuspensionDistance: 0.3
   m_ForceAppPointDistance: 0
-  m_Mass: 100
+  m_Mass: 10
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
     m_ExtremumSlip: 0.4
@@ -251,7 +251,7 @@ GameObject:
   - component: {fileID: 5973530708602904592}
   - component: {fileID: 9120405450912262034}
   - component: {fileID: 4759552776539467003}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Fari_zad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -350,7 +350,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 973880798133729305}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.87210894, y: 0.735, z: 0.94997513}
+  m_LocalPosition: {x: -0.87210894, y: 0.17499995, z: 0.94997513}
   m_LocalScale: {x: 1.43019, y: 1.4301898, z: 1.4301898}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -366,14 +366,14 @@ WheelCollider:
   m_GameObject: {fileID: 973880798133729305}
   serializedVersion: 2
   m_Center: {x: 0, y: 0, z: 0}
-  m_Radius: 0.28
+  m_Radius: 0.285
   m_SuspensionSpring:
     spring: 50000
     damper: 2000
     targetPosition: 0.2
   m_SuspensionDistance: 0.3
   m_ForceAppPointDistance: 0
-  m_Mass: 100
+  m_Mass: 10
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
     m_ExtremumSlip: 0.4
@@ -407,7 +407,7 @@ GameObject:
   - component: {fileID: 5866371777194670036}
   - component: {fileID: 6580998418818863199}
   - component: {fileID: 5070980092735121601}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wheel_FR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -423,7 +423,7 @@ Transform:
   m_GameObject: {fileID: 1013109216966916940}
   m_LocalRotation: {x: 0.00000027616753, y: -0.0000000437114, z: -0.000000043711374,
     w: 1}
-  m_LocalPosition: {x: 0.73802614, y: 0.39431044, z: 0.94997513}
+  m_LocalPosition: {x: 0.73802614, y: -0.16568962, z: 0.94997513}
   m_LocalScale: {x: 1.864538, y: 1.864538, z: 1.864538}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -458,9 +458,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -5162918126070627354, guid: 60364c816c136f5479bf1e6006253da2, type: 3}
-  - {fileID: -6605527252378014768, guid: 60364c816c136f5479bf1e6006253da2, type: 3}
-  - {fileID: 3434790808203502335, guid: 60364c816c136f5479bf1e6006253da2, type: 3}
+  - {fileID: 2100000, guid: 2635c00e6bd4f554b9a911521f256d2b, type: 2}
+  - {fileID: 2100000, guid: 76004abbc21555a42b45b739337068fe, type: 2}
+  - {fileID: 2100000, guid: 76004abbc21555a42b45b739337068fe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -493,7 +493,7 @@ GameObject:
   - component: {fileID: 423915110907889011}
   - component: {fileID: 6471260541682346527}
   - component: {fileID: 4933827737785880324}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Interior
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -544,9 +544,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 6022593723485153691, guid: 60364c816c136f5479bf1e6006253da2, type: 3}
+  - {fileID: 2100000, guid: 13b848dafe1b35d48b4cd05e79a86c15, type: 2}
   - {fileID: 477780626736311517, guid: 60364c816c136f5479bf1e6006253da2, type: 3}
-  - {fileID: 5819370844895585013, guid: 60364c816c136f5479bf1e6006253da2, type: 3}
+  - {fileID: 2100000, guid: 13b848dafe1b35d48b4cd05e79a86c15, type: 2}
   - {fileID: -7625600280613457533, guid: 60364c816c136f5479bf1e6006253da2, type: 3}
   - {fileID: 1895778719069068163, guid: 60364c816c136f5479bf1e6006253da2, type: 3}
   m_StaticBatchInfo:
@@ -581,7 +581,7 @@ GameObject:
   - component: {fileID: 3198149566356405289}
   - component: {fileID: 5419381485272923456}
   - component: {fileID: 3455866305962220554}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bump_rear_ok
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -665,7 +665,7 @@ GameObject:
   - component: {fileID: 7472105524618783533}
   - component: {fileID: 635326932553126258}
   - component: {fileID: 316891285658793971}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wheels_RR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -681,7 +681,7 @@ Transform:
   m_GameObject: {fileID: 4175606062514959673}
   m_LocalRotation: {x: 0.00000027616753, y: -0.0000000437114, z: -0.000000043711374,
     w: 1}
-  m_LocalPosition: {x: 0.73802614, y: 0.39430848, z: -1.5798765}
+  m_LocalPosition: {x: 0.73802614, y: -0.16569158, z: -1.5798765}
   m_LocalScale: {x: 1.864538, y: 1.864538, z: 1.864538}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -716,9 +716,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -5162918126070627354, guid: 60364c816c136f5479bf1e6006253da2, type: 3}
-  - {fileID: -6605527252378014768, guid: 60364c816c136f5479bf1e6006253da2, type: 3}
-  - {fileID: 3434790808203502335, guid: 60364c816c136f5479bf1e6006253da2, type: 3}
+  - {fileID: 4362962105363994262, guid: e603c9181e226de4899ff229c1c103a2, type: 3}
+  - {fileID: 2100000, guid: 76004abbc21555a42b45b739337068fe, type: 2}
+  - {fileID: 2100000, guid: 76004abbc21555a42b45b739337068fe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -751,7 +751,7 @@ GameObject:
   - component: {fileID: 1834128763514499925}
   - component: {fileID: 9135996534284570608}
   - component: {fileID: 5350624441274479210}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bump_front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -836,7 +836,7 @@ GameObject:
   - component: {fileID: 7916905422261920948}
   - component: {fileID: 489677808624695608}
   - component: {fileID: 4214607240230831807}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: door_rf_ok
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -889,7 +889,7 @@ MeshRenderer:
   m_Materials:
   - {fileID: 8514969349556533030, guid: 60364c816c136f5479bf1e6006253da2, type: 3}
   - {fileID: 9198037526840790507, guid: 60364c816c136f5479bf1e6006253da2, type: 3}
-  - {fileID: 7168317907123845534, guid: 60364c816c136f5479bf1e6006253da2, type: 3}
+  - {fileID: 2100000, guid: 5316c7d0de104884bb64c744eee7b2a8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -922,7 +922,7 @@ GameObject:
   - component: {fileID: 3814277539656693}
   - component: {fileID: 9182209730550385216}
   - component: {fileID: 6998918563783260764}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: door_lf_ok
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -975,7 +975,7 @@ MeshRenderer:
   m_Materials:
   - {fileID: 51863376505929132, guid: 60364c816c136f5479bf1e6006253da2, type: 3}
   - {fileID: 3114131586102157575, guid: 60364c816c136f5479bf1e6006253da2, type: 3}
-  - {fileID: 5413124266431254952, guid: 60364c816c136f5479bf1e6006253da2, type: 3}
+  - {fileID: 2100000, guid: 5316c7d0de104884bb64c744eee7b2a8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1008,7 +1008,7 @@ GameObject:
   - component: {fileID: 4090215580048705945}
   - component: {fileID: 2250022568847912802}
   - component: {fileID: 4760319322195385610}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wheels_FL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1024,7 +1024,7 @@ Transform:
   m_GameObject: {fileID: 4758155123078432851}
   m_LocalRotation: {x: 0.00000027616753, y: -0.0000000437114, z: -0.000000043711374,
     w: 1}
-  m_LocalPosition: {x: -0.87210894, y: 0.39431044, z: 0.94997513}
+  m_LocalPosition: {x: -0.87210894, y: -0.16568962, z: 0.94997513}
   m_LocalScale: {x: 1.864538, y: 1.864538, z: 1.864538}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1059,9 +1059,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -5162918126070627354, guid: 60364c816c136f5479bf1e6006253da2, type: 3}
-  - {fileID: -6605527252378014768, guid: 60364c816c136f5479bf1e6006253da2, type: 3}
-  - {fileID: 3434790808203502335, guid: 60364c816c136f5479bf1e6006253da2, type: 3}
+  - {fileID: 2100000, guid: 2635c00e6bd4f554b9a911521f256d2b, type: 2}
+  - {fileID: 2100000, guid: 76004abbc21555a42b45b739337068fe, type: 2}
+  - {fileID: 2100000, guid: 76004abbc21555a42b45b739337068fe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1094,9 +1094,9 @@ GameObject:
   - component: {fileID: 6619798588421081806}
   - component: {fileID: 7855520087488674876}
   - component: {fileID: 7130751926423561524}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AI_UAZ 3741
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1113,6 +1113,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 6456616091826523537}
+  - {fileID: 6068200865397189249}
   - {fileID: 2494673615037341944}
   - {fileID: 4090215580048705945}
   - {fileID: 6865370632402919566}
@@ -1145,7 +1147,7 @@ Rigidbody:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_ImplicitCom: 1
+  m_ImplicitCom: 0
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -1174,7 +1176,7 @@ MonoBehaviour:
   - {fileID: 5866371777194670036}
   - {fileID: 3525343340335990248}
   - {fileID: 7472105524618783533}
-  useCustomCenterOfMass: 0
+  useCustomCenterOfMass: 1
   centerOfMassOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &5870799250419856696
 GameObject:
@@ -1186,7 +1188,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6456616091826523537}
   - component: {fileID: 7467136449988509360}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Box_Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1201,11 +1203,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5870799250419856696}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.813671, y: 3.2670522, z: 10.340949}
+  m_LocalPosition: {x: 0, y: 1.146, z: -0.36600018}
   m_LocalScale: {x: 1.43019, y: 1.43019, z: 1.43019}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2494673615037341944}
+  m_Father: {fileID: 6619798588421081806}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &7467136449988509360
@@ -1254,7 +1256,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5879544325056143037}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.87210894, y: 0.73499805, z: -1.5798765}
+  m_LocalPosition: {x: -0.87210894, y: 0.17499799, z: -1.5798765}
   m_LocalScale: {x: 1.43019, y: 1.4301898, z: 1.4301898}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1270,14 +1272,14 @@ WheelCollider:
   m_GameObject: {fileID: 5879544325056143037}
   serializedVersion: 2
   m_Center: {x: 0, y: 0, z: 0}
-  m_Radius: 0.28
+  m_Radius: 0.285
   m_SuspensionSpring:
     spring: 50000
     damper: 2000
     targetPosition: 0.2
   m_SuspensionDistance: 0.3
   m_ForceAppPointDistance: 0
-  m_Mass: 100
+  m_Mass: 10
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
     m_ExtremumSlip: 0.4
@@ -1325,7 +1327,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6039326564614754738}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.73802614, y: 0.73499805, z: -1.5798765}
+  m_LocalPosition: {x: 0.73802614, y: 0.17499799, z: -1.5798765}
   m_LocalScale: {x: 1.43019, y: 1.4301898, z: 1.4301898}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1341,14 +1343,14 @@ WheelCollider:
   m_GameObject: {fileID: 6039326564614754738}
   serializedVersion: 2
   m_Center: {x: 0, y: 0, z: 0}
-  m_Radius: 0.28
+  m_Radius: 0.285
   m_SuspensionSpring:
     spring: 50000
     damper: 2000
     targetPosition: 0.2
   m_SuspensionDistance: 0.3
   m_ForceAppPointDistance: 0
-  m_Mass: 100
+  m_Mass: 10
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
     m_ExtremumSlip: 0.4
@@ -1382,7 +1384,7 @@ GameObject:
   - component: {fileID: 4267020369113407217}
   - component: {fileID: 4118626896945257782}
   - component: {fileID: 3072611924244779682}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dvigatel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1433,7 +1435,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -2443798845963021356, guid: 60364c816c136f5479bf1e6006253da2, type: 3}
+  - {fileID: 2100000, guid: 13b848dafe1b35d48b4cd05e79a86c15, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1466,7 +1468,7 @@ GameObject:
   - component: {fileID: 4560758874476207033}
   - component: {fileID: 4857298088999324488}
   - component: {fileID: 5686953262175802654}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: wing_rf_ok
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1518,8 +1520,8 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 7517109705037752293, guid: 60364c816c136f5479bf1e6006253da2, type: 3}
-  - {fileID: 344487314850648134, guid: 60364c816c136f5479bf1e6006253da2, type: 3}
-  - {fileID: -6111139067206785889, guid: 60364c816c136f5479bf1e6006253da2, type: 3}
+  - {fileID: 2100000, guid: 5316c7d0de104884bb64c744eee7b2a8, type: 2}
+  - {fileID: 2100000, guid: 9982588640a976c4e8c238d42d8ea525, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1552,7 +1554,7 @@ GameObject:
   - component: {fileID: 3525343340335990248}
   - component: {fileID: 8596868779958036899}
   - component: {fileID: 7786726861633590196}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wheels_RL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1568,7 +1570,7 @@ Transform:
   m_GameObject: {fileID: 7245968712559928419}
   m_LocalRotation: {x: 0.00000027616753, y: -0.0000000437114, z: -0.000000043711374,
     w: 1}
-  m_LocalPosition: {x: -0.87210894, y: 0.39430848, z: -1.5798765}
+  m_LocalPosition: {x: -0.87210894, y: -0.16569158, z: -1.5798765}
   m_LocalScale: {x: 1.864538, y: 1.864538, z: 1.864538}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1603,9 +1605,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -5162918126070627354, guid: 60364c816c136f5479bf1e6006253da2, type: 3}
-  - {fileID: -6605527252378014768, guid: 60364c816c136f5479bf1e6006253da2, type: 3}
-  - {fileID: 3434790808203502335, guid: 60364c816c136f5479bf1e6006253da2, type: 3}
+  - {fileID: 2100000, guid: 2635c00e6bd4f554b9a911521f256d2b, type: 2}
+  - {fileID: 2100000, guid: 76004abbc21555a42b45b739337068fe, type: 2}
+  - {fileID: 2100000, guid: 76004abbc21555a42b45b739337068fe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1637,9 +1639,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6068200865397189249}
   - component: {fileID: 7576962688544682482}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Checking Box
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1652,11 +1654,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7775935138113596326}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.813671, y: 3.2670522, z: 10.340949}
-  m_LocalScale: {x: 1.43019, y: 1.43019, z: 1.43019}
+  m_LocalPosition: {x: 0, y: 0.809, z: -0.36600018}
+  m_LocalScale: {x: 1.43019, y: 2.627688, z: 1.43019}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2494673615037341944}
+  m_Father: {fileID: 6619798588421081806}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &7576962688544682482
@@ -1689,7 +1691,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2494673615037341944}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1704,12 +1706,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8024975327565996590}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.813671, y: -1.5610521, z: -10.706949}
+  m_LocalPosition: {x: -9.813671, y: -2.121052, z: -10.706949}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6456616091826523537}
-  - {fileID: 6068200865397189249}
   - {fileID: 1834128763514499925}
   - {fileID: 3198149566356405289}
   - {fileID: 7460432264676328683}
@@ -1739,7 +1739,7 @@ GameObject:
   - component: {fileID: 5801546567145090301}
   - component: {fileID: 2371044965621121809}
   - component: {fileID: 4220322661960872893}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: wing_lf_ok
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1791,7 +1791,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: -3309073237485035152, guid: 60364c816c136f5479bf1e6006253da2, type: 3}
-  - {fileID: -3433440550827702796, guid: 60364c816c136f5479bf1e6006253da2, type: 3}
+  - {fileID: 2100000, guid: 5316c7d0de104884bb64c744eee7b2a8, type: 2}
   - {fileID: 8924833327390041211, guid: 60364c816c136f5479bf1e6006253da2, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -1825,7 +1825,7 @@ GameObject:
   - component: {fileID: 62998486661338277}
   - component: {fileID: 8101623633646894828}
   - component: {fileID: 5470741507205297564}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: light_chrome
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1909,7 +1909,7 @@ GameObject:
   - component: {fileID: 4481529436457843032}
   - component: {fileID: 9198530084394046401}
   - component: {fileID: 5226195600319006309}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Stekla
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1994,7 +1994,7 @@ GameObject:
   - component: {fileID: 5072614177393352400}
   - component: {fileID: 4828661288207049082}
   - component: {fileID: 5187379380934853135}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: windscreen_ok
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2045,7 +2045,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2287853985778789715, guid: 60364c816c136f5479bf1e6006253da2, type: 3}
+  - {fileID: 2100000, guid: 5316c7d0de104884bb64c744eee7b2a8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2078,7 +2078,7 @@ GameObject:
   - component: {fileID: 7131135839193603340}
   - component: {fileID: 3915761007944184137}
   - component: {fileID: 6762683694634889764}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: plate01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
