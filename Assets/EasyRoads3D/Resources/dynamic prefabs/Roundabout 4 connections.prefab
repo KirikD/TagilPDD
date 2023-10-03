@@ -2112,7 +2112,7 @@ MonoBehaviour:
       laneIndex: 0
       direction: 0
   baseScript: {fileID: 0}
-  isSceneObject: 1
+  isSceneObject: 0
   guiChanged: 1
   crossingName: Roundabout 4 connections
   activeSidewalks: 1
@@ -2332,8 +2332,8 @@ MonoBehaviour:
     includeRightSidewalk: 1
     roadMaterial: {fileID: 2100000, guid: f182e2714eb8a714a99ed091081ce16c, type: 2}
     roadMaterials:
-    - {fileID: 2100000, guid: f182e2714eb8a714a99ed091081ce16c, type: 2}
-    - {fileID: 2100000, guid: d74dc327ca3fad8408eeeaf8ad54a110, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
     centerPointPercentage: 0.5
     leftIndent: 9
     rightIndent: 8
@@ -2584,8 +2584,8 @@ MonoBehaviour:
     includeRightSidewalk: 1
     roadMaterial: {fileID: 2100000, guid: f182e2714eb8a714a99ed091081ce16c, type: 2}
     roadMaterials:
-    - {fileID: 2100000, guid: f182e2714eb8a714a99ed091081ce16c, type: 2}
-    - {fileID: 2100000, guid: d74dc327ca3fad8408eeeaf8ad54a110, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
     centerPointPercentage: 0.50000006
     leftIndent: 18
     rightIndent: 17
@@ -2836,8 +2836,8 @@ MonoBehaviour:
     includeRightSidewalk: 1
     roadMaterial: {fileID: 2100000, guid: f182e2714eb8a714a99ed091081ce16c, type: 2}
     roadMaterials:
-    - {fileID: 2100000, guid: f182e2714eb8a714a99ed091081ce16c, type: 2}
-    - {fileID: 2100000, guid: d74dc327ca3fad8408eeeaf8ad54a110, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
     centerPointPercentage: 0.49999994
     leftIndent: 26
     rightIndent: 25
@@ -3088,8 +3088,8 @@ MonoBehaviour:
     includeRightSidewalk: 1
     roadMaterial: {fileID: 2100000, guid: f182e2714eb8a714a99ed091081ce16c, type: 2}
     roadMaterials:
-    - {fileID: 2100000, guid: f182e2714eb8a714a99ed091081ce16c, type: 2}
-    - {fileID: 2100000, guid: d74dc327ca3fad8408eeeaf8ad54a110, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
     centerPointPercentage: 0.50000006
     leftIndent: 1
     rightIndent: 34
@@ -6526,7 +6526,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
+  m_StitchLightmapSeams: 1
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -6543,7 +6543,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1095871287244456}
-  m_Mesh: {fileID: 4300000, guid: 8201016becff039428a4e3ee32a16ab3, type: 2}
+  m_Mesh: {fileID: 4300000, guid: 226f70824f84d0742ad3d9651b572f91, type: 2}
 --- !u!64 &64209305409550758
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6641,7 +6641,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
+  m_StitchLightmapSeams: 1
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
